@@ -1,0 +1,69 @@
+{
+  "businessName": "Noor Smile Dental Studio",
+  "brandColor": "#0b5d5b",
+  "launcherLabel": "Ask us anything",
+  "whatsappNumber": "920000000000",
+  "whatsappIsPlaceholder": true,
+  "phoneDisplay": "0300-0000000 (placeholder)",
+  "welcome": "Assalam o Alaikum! I am the assistant for Noor Smile Dental Studio. Ask about timings, prices or location, or book an appointment. You can write in English or Roman Urdu.",
+  "address": "Plot 00, Main Boulevard, Gulberg III, Lahore (fictional address)",
+  "mapUrl": "https://www.openstreetmap.org/search?query=Gulberg%20III%20Lahore",
+  "hours": [
+    { "days": "Mon to Sat", "time": "10:00 am to 8:00 pm" },
+    { "days": "Sunday", "time": "Closed (emergencies by appointment)" }
+  ],
+  "hoursNote": "Closed on public holidays.",
+  "priceNote": "Sample prices for this demo. Final cost is confirmed after the dentist sees you.",
+  "services": [
+    { "id": "checkup", "name": "Check-up and cleaning", "price": "Rs 2,500", "description": "Full examination plus scaling and polishing.", "keywords": ["checkup", "check up", "cleaning", "scaling", "polish", "polishing", "safai", "examination"] },
+    { "id": "whitening", "name": "Teeth whitening", "price": "Rs 15,000", "description": "One-hour in-chair whitening session.", "keywords": ["whitening", "whiten", "whitner", "white", "bleaching", "safed", "chamak"] },
+    { "id": "filling", "name": "Tooth filling", "price": "from Rs 3,500", "description": "Tooth-coloured fillings for cavities.", "keywords": ["filling", "fillings", "cavity", "cavities", "kira", "kiray", "sorakh"] },
+    { "id": "rootcanal", "name": "Root canal", "price": "from Rs 18,000", "description": "Pain-relieving treatment for an infected tooth, usually 1 to 2 visits.", "keywords": ["root canal", "rootcanal", "canal", "nerve", "naas", "infection"] },
+    { "id": "braces", "name": "Braces consultation", "price": "Rs 1,500", "description": "Assessment for braces or clear aligners.", "keywords": ["braces", "brace", "aligner", "aligners", "tedhe", "teda", "straighten"] }
+  ],
+  "faqs": [
+    {
+      "id": "pain",
+      "questions": ["Does treatment hurt?", "Is it painful?", "Dard hoga kya?"],
+      "keywords": ["pain", "painful", "hurt", "hurts", "dard", "dukhta", "anesthesia"],
+      "answer": "We use local anaesthesia so you should not feel pain during treatment. Tell the dentist straight away if you feel discomfort and they will pause."
+    },
+    {
+      "id": "kids",
+      "questions": ["Do you treat children?", "Is there a dentist for kids?", "Bachon ka ilaaj hota hai?"],
+      "keywords": ["kids", "kid", "child", "children", "bacha", "bache", "bachon", "bachay", "paediatric"],
+      "answer": "Yes, children are welcome. Please book a morning slot if you can, children are usually calmer earlier in the day."
+    },
+    {
+      "id": "emergency",
+      "questions": ["I have a toothache, what should I do?", "Emergency dentist", "Daant mein shadeed dard hai"],
+      "keywords": ["emergency", "urgent", "toothache", "swelling", "bleeding", "broken tooth", "shadeed", "daant dard"],
+      "answer": "For a severe toothache, swelling or a broken tooth, send us a WhatsApp message and we will try to see you the same day. If there is heavy bleeding or swelling that affects breathing, go to a hospital emergency room."
+    },
+    {
+      "id": "payment",
+      "questions": ["Which payment methods do you accept?", "Do you take cards or JazzCash?", "Payment kaise karni hai?"],
+      "keywords": ["payment", "payments", "card", "cards", "jazzcash", "easypaisa", "cash", "installment", "installments", "qist"],
+      "answer": "Cash, bank transfer and mobile wallets are accepted (sample answer for this demo). Ask the team about instalments for larger treatments."
+    },
+    {
+      "id": "insurance",
+      "questions": ["Do you accept insurance?", "Health card accepted?", "Insurance chalti hai?"],
+      "keywords": ["insurance", "healthcard", "panel", "sehat"],
+      "answer": "Please ask the team on WhatsApp which insurance panels are accepted, as this changes from time to time."
+    },
+    {
+      "id": "female",
+      "questions": ["Is there a lady dentist?", "Female doctor available?", "Lady doctor hai?"],
+      "keywords": ["lady", "female", "woman", "women", "ladies", "khatoon"],
+      "answer": "Yes, a female dentist is available on set days. Tell us in the booking and we will confirm a slot with her."
+    }
+  ],
+  "extraKeywords": {
+    "location": ["gulberg", "firdous", "market", "metro"],
+    "services": ["dentist", "dental", "teeth", "daant"]
+  },
+  "quickReplies": ["Opening hours", "Prices", "Where are you?", "Book appointment"],
+  "timeChips": ["Today", "Tomorrow", "This weekend"],
+  "aiMode": { "enabled": false, "endpoint": "http://localhost:11434", "model": "llama3.2", "timeoutMs": 15000 }
+}

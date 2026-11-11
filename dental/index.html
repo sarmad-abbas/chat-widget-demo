@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noor Smile Dental Studio, Gulberg III, Lahore (demo)</title>
+<meta name="description" content="Fictional demo site for a dental clinic in Gulberg, Lahore, used to show a website chat assistant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10302f; --teal:#0b5d5b; --teal-d:#073f3e; --cream:#f7f1e6; --sand:#efe6d4; --coral:#e8734a; --mint:#cfe7e1; --white:#fffdf9;
+    --serif:"Fraunces",Georgia,serif; --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+  .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:99}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+  header.top{position:sticky;top:0;z-index:10;background:rgba(247,241,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(16,48,47,.08)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+  .logo{font-family:var(--serif);font-weight:600;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:9px}
+  .logo i{width:30px;height:30px;border-radius:50% 50% 50% 8px;background:var(--teal);display:inline-block;position:relative}
+  .logo i::after{content:"";position:absolute;inset:8px 9px 7px;border-radius:50% 50% 60% 60%;background:var(--cream)}
+  nav{display:none;gap:26px;font-weight:500;font-size:.95rem}
+  nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;background:var(--teal);color:#fff;font-weight:700;text-decoration:none;border:0;transition:transform .15s,background .15s}
+  .btn:hover{background:var(--teal-d);transform:translateY(-1px)}
+  .btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+  .btn.alt:hover{background:var(--ink);color:#fff}
+  .top .btn{min-height:40px;padding:0 16px;font-size:.9rem}
+
+  .hero{padding:44px 0 56px;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;gap:34px}
+  .eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--coral)}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.3rem,8.5vw,4.3rem);line-height:1.04;letter-spacing:-.02em;margin:12px 0 18px}
+  h1 em{font-style:italic;color:var(--teal)}
+  .lede{font-size:1.1rem;max-width:34ch;opacity:.85}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .art{position:relative;aspect-ratio:1/0.82;max-width:460px;width:100%;justify-self:center}
+  .blob{position:absolute;inset:0;background:var(--mint);border-radius:44% 56% 52% 48%/52% 44% 56% 48%}
+  .art svg{position:absolute;inset:6% 12%;width:76%;height:88%;filter:drop-shadow(0 18px 24px rgba(7,63,62,.25))}
+  .tag{position:absolute;background:var(--white);border-radius:14px;padding:10px 14px;box-shadow:0 10px 24px rgba(16,48,47,.14);font-size:.82rem;font-weight:700;line-height:1.25}
+  .tag small{display:block;font-weight:400;opacity:.7}
+  .tag.a{left:-2%;top:12%}.tag.b{right:-1%;bottom:10%}
+
+  section{padding:60px 0}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,5.5vw,2.6rem);line-height:1.1;letter-spacing:-.015em;margin:8px 0 14px}
+  .sub{max-width:46ch;opacity:.8}
+  .grid{display:grid;gap:14px;margin-top:30px}
+  .card{background:var(--white);border-radius:20px;padding:22px;border:1px solid rgba(16,48,47,.08);transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(16,48,47,.1)}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;margin-bottom:6px}
+  .card p{opacity:.78;font-size:.96rem}
+  .price{display:inline-block;margin-top:14px;font-weight:700;color:var(--teal);background:var(--mint);padding:4px 12px;border-radius:999px;font-size:.9rem}
+  .note{font-size:.85rem;opacity:.65;margin-top:18px}
+
+  .visit{background:var(--teal);color:#f3ede0}
+  .visit h2{color:#fff}.visit .eyebrow{color:#ffb596}
+  .visit .cols{display:grid;gap:30px;margin-top:26px}
+  .hrs{list-style:none;padding:0}
+  .hrs li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .hrs li span:last-child{font-weight:700;text-align:right}
+  .addr{font-size:1.15rem;font-family:var(--serif)}
+  .addr small{display:block;font-family:var(--sans);font-size:.9rem;opacity:.75;margin-top:8px}
+  .visit .btn{background:var(--cream);color:var(--teal-d);margin-top:18px}
+
+  .contact{text-align:center}
+  .contact .sub{margin-inline:auto}
+  .contact .cta{justify-content:center}
+  footer{padding:26px 0 90px;text-align:center;font-size:.85rem;opacity:.75;border-top:1px solid rgba(16,48,47,.1)}
+  footer a{font-weight:700}
+
+  @media(min-width:720px){
+    nav{display:flex}
+    .hero{padding:72px 0 88px}
+    .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .visit .cols{grid-template-columns:1fr 1fr}
+    section{padding:84px 0}
+  }
+  @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><i aria-hidden="true"></i>Noor Smile</a>
+    <nav aria-label="Main"><a href="#services">Treatments</a><a href="#visit">Hours</a><a href="#visit">Location</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="#contact">Book a visit</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Gulberg III, Lahore</p>
+        <h1>Gentle dentistry, <em>explained</em> before it begins.</h1>
+        <p class="lede">Check-ups, whitening, fillings and root canals in a calm, clean clinic. You see the price before we start.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Book an appointment</a>
+          <a class="btn alt" href="#services">See treatments</a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="blob"></div>
+        <svg viewBox="0 0 200 230" fill="none"><path d="M100 14c-22-12-58-8-70 22-9 24 2 44 6 66 4 24 4 52 16 84 5 14 18 12 22-4 5-20 8-46 26-46s21 26 26 46c4 16 17 18 22 4 12-32 12-60 16-84 4-22 15-42 6-66-12-30-48-34-70-22z" fill="#fffdf9" stroke="#0b5d5b" stroke-width="5" stroke-linejoin="round"/><path d="M62 52c6-8 16-10 24-8" stroke="#cfe7e1" stroke-width="7" stroke-linecap="round"/></svg>
+        <div class="tag a">Sample prices shown<small>no surprises at the desk</small></div>
+        <div class="tag b">Mon to Sat<small>10 am to 8 pm</small></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">Treatments</p>
+      <h2>What we do, and what it costs.</h2>
+      <p class="sub">Sample prices for this demo. The dentist confirms the final cost after examining you.</p>
+      <div class="grid">
+        <article class="card"><h3>Check-up and cleaning</h3><p>Full examination plus scaling and polishing. A good yearly habit.</p><span class="price">Rs 2,500</span></article>
+        <article class="card"><h3>Teeth whitening</h3><p>One-hour in-chair session for a few shades brighter.</p><span class="price">Rs 15,000</span></article>
+        <article class="card"><h3>Tooth filling</h3><p>Tooth-coloured fillings that blend with your smile.</p><span class="price">from Rs 3,500</span></article>
+        <article class="card"><h3>Root canal</h3><p>Relieves the pain of an infected tooth, usually in one or two visits.</p><span class="price">from Rs 18,000</span></article>
+        <article class="card"><h3>Braces consultation</h3><p>An honest assessment for braces or clear aligners.</p><span class="price">Rs 1,500</span></article>
+        <article class="card"><h3>Kids welcome</h3><p>Gentle first visits for children. Morning slots work best.</p><span class="price">Ask the team</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <p class="eyebrow">Visit us</p>
+      <h2>Hours and location.</h2>
+      <div class="cols">
+        <ul class="hrs" aria-label="Opening hours">
+          <li><span>Monday to Saturday</span><span>10:00 am to 8:00 pm</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+          <li><span>Emergencies</span><span>By appointment</span></li>
+        </ul>
+        <div>
+          <p class="addr">Plot 00, Main Boulevard, Gulberg III, Lahore<small>Fictional address for this demo. Parking available.</small></p>
+          <a class="btn" href="https://www.openstreetmap.org/search?query=Gulberg%20III%20Lahore" target="_blank" rel="noopener">Open map</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Questions? Ask the chat, or message us.</h2>
+      <p class="sub">The chat button at the bottom right answers common questions in English or Roman Urdu and can send your details to our WhatsApp.</p>
+      <p class="note">Phone: 0300-0000000 (placeholder number)</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Demo site, fictional business. Built to show a website chat assistant. <a href="../index.html">Back to the pitch page</a></div>
+</footer>
+
+<script src="../widget.js" data-config="clinic.json"></script>
+</body>
+</html>

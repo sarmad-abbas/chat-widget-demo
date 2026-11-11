@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A chat assistant for your website, answers questions and sends enquiries to WhatsApp</title>
+<meta name="description" content="A small chat box for your business website. It answers common questions in English and Roman Urdu and passes enquiries to your WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1a2320;--green:#128c4a;--green-d:#0b6a37;--bg:#f6f4ee;--card:#fff;--line:#e3ded0;--soft:#58635e}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{width:min(900px,100% - 40px);margin-inline:auto}
+  a:focus-visible,button:focus-visible{outline:3px solid #f0a500;outline-offset:3px}
+  h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.015em;line-height:1.1}
+  h1{font-size:clamp(2.1rem,7vw,3.5rem);margin:12px 0 18px}
+  h2{font-size:clamp(1.6rem,4.5vw,2.1rem);margin-bottom:16px}
+  .eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green)}
+  header{padding:56px 0 40px}
+  .lede{font-size:1.15rem;max-width:44ch;color:var(--soft)}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:12px;background:var(--green);color:#fff;font-weight:700;text-decoration:none}
+  .btn:hover{background:var(--green-d)}
+  .btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+  .btn.alt:hover{background:var(--ink);color:#fff}
+  .row{display:grid;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card h3{font-size:1.1rem;margin-bottom:6px}
+  .card p{color:var(--soft);font-size:.97rem}
+  .demo{display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+  ul.tick{list-style:none;padding:0;display:grid;gap:10px}
+  ul.tick li{padding-left:28px;position:relative}
+  ul.tick li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:8px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+  ol.steps{list-style:none;padding:0;display:grid;gap:14px;counter-reset:s}
+  ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px 18px 66px;position:relative}
+  ol.steps li::before{content:counter(s);position:absolute;left:18px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700}
+  ol.steps strong{display:block}
+  .honest{background:#fff8e6;border-color:#ecd9a0}
+  .contact{background:var(--ink);color:#fff;border-radius:20px;padding:30px;margin:10px 0 50px}
+  .contact p{opacity:.85;margin-bottom:10px}
+  .contact strong{font-size:1.2rem}
+  footer{padding:0 0 50px;font-size:.85rem;color:var(--soft)}
+  @media(min-width:700px){.row.two{grid-template-columns:1fr 1fr}.row.three{grid-template-columns:repeat(3,1fr)}header{padding-top:84px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">For Lahore business owners</p>
+    <h1>A chat box for your website that answers customers and sends enquiries to your WhatsApp.</h1>
+    <p class="lede">Customers ask about timings, prices and location in English or Roman Urdu. The chat answers from your own information. If someone wants to book, it collects their details and opens WhatsApp with the message ready.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Try it on two sample businesses</h2>
+      <p style="color:var(--soft);margin-bottom:18px">Both are fictional. They use the same chat with different information. Click the chat button on each page and ask something, for example "kab khulta hai" or "whitening ki fees".</p>
+      <div class="row two">
+        <div class="card demo"><div><h3>Dental clinic, Gulberg</h3><p>Noor Smile Dental Studio (fictional). Treatments, prices, appointment booking.</p></div><a class="btn" href="dental/index.html">Open the clinic demo</a></div>
+        <div class="card demo"><div><h3>Coaching academy, Johar Town</h3><p>Brightpath Coaching Academy (fictional). Courses, fees, free demo class.</p></div><a class="btn alt" href="academy/index.html">Open the academy demo</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What you get</h2>
+      <ul class="tick">
+        <li>A chat button on your website that answers your most common questions (timings, prices, address, services, your own FAQs).</li>
+        <li>Understands English and Roman Urdu, and forgives small spelling mistakes.</li>
+        <li>A short enquiry form inside the chat (name, preferred time, what they need) that opens WhatsApp with the message already written. The customer presses send.</li>
+        <li>Your brand colour, your business name, works on phones.</li>
+        <li>Nothing to maintain on a server. It is plain files, so it can be hosted free (for example on GitHub Pages). There is no monthly server bill.</li>
+        <li>Changes to prices or hours are a small edit to one text file.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>You send me your details.</strong>Timings, address, services with prices, and the questions customers ask most.</li>
+        <li><strong>I set up your chat.</strong>I write your questions and answers, set your colours and WhatsApp number, and test it.</li>
+        <li><strong>One line goes on your site.</strong>A single script tag is added to your website. Enquiries then arrive on your WhatsApp.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="card honest">
+        <h3>What it is not</h3>
+        <p>It is not a general AI. It answers the questions it has been set up for and is good at those. When it does not know, it says so and offers to pass the message to you on WhatsApp. It does not send anything by itself: the customer always presses send in WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border:0">
+    <div class="wrap">
+      <div class="contact">
+        <h2 style="color:#fff">Want one for your business?</h2>
+        <p>Message me on WhatsApp and send your timings and price list.</p>
+        <p><strong>[SARMAD: WhatsApp number]</strong></p>
+        <p style="font-size:.9rem">Sarmad Abbas, Lahore</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">The two demo businesses are fictional. WhatsApp numbers in the demos are placeholders.</div></footer>
+</body>
+</html>

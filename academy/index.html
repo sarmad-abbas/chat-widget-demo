@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brightpath Coaching Academy, Johar Town, Lahore (demo)</title>
+<meta name="description" content="Fictional demo site for a coaching academy in Johar Town, Lahore, used to show a website chat assistant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14183a; --navy2:#1f2552; --gold:#f5b301; --paper:#fbf9f3; --lilac:#e8e6fa; --ink:#14183a; --soft:#5b6086;
+    --head:"Bricolage Grotesque",system-ui,sans-serif; --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:99}
+
+  header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+  .logo{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:9px}
+  .logo b{width:28px;height:28px;background:var(--gold);color:var(--navy);display:grid;place-items:center;border-radius:8px 8px 8px 2px;font-size:1rem}
+  nav{display:none;gap:26px;font-weight:500;font-size:.95rem}
+  nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:12px;background:var(--gold);color:var(--navy);font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 0 #b88700}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #b88700}
+  .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
+  .btn.ghost:hover{box-shadow:inset 0 0 0 2px #fff}
+  .top .btn{min-height:38px;padding:0 14px;font-size:.88rem;box-shadow:none}
+
+  .hero{background:var(--navy);color:#fff;padding:46px 0 0;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(245,179,1,.25),transparent 65%)}
+  .hero .wrap{position:relative}
+  .eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+  h1{font-family:var(--head);font-weight:800;font-size:clamp(2.4rem,9vw,4.6rem);line-height:1;letter-spacing:-.03em;margin:14px 0 18px;max-width:14ch}
+  h1 span{color:var(--gold)}
+  .lede{max-width:40ch;font-size:1.1rem;opacity:.85}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:46px;background:var(--navy2);border-radius:18px 18px 0 0;overflow:hidden}
+  .stats div{padding:18px 14px;border-right:1px solid rgba(255,255,255,.1)}
+  .stats div:last-child{border:0}
+  .stats strong{display:block;font-family:var(--head);font-size:1rem;color:var(--gold)}
+  .stats span{font-size:.82rem;opacity:.75}
+
+  section{padding:60px 0}
+  h2{font-family:var(--head);font-weight:700;font-size:clamp(1.8rem,5.5vw,2.7rem);line-height:1.05;letter-spacing:-.02em;margin:8px 0 12px}
+  .sub{color:var(--soft);max-width:46ch}
+  .courses{display:grid;gap:14px;margin-top:30px}
+  .course{display:flex;flex-direction:column;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:22px;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+  .course:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .course:nth-child(2n){background:var(--lilac)}
+  .course h3{font-family:var(--head);font-size:1.3rem;margin-bottom:6px}
+  .course p{color:var(--soft);font-size:.96rem;flex:1}
+  .fee{margin-top:16px;font-weight:700}
+  .fee small{font-weight:500;color:var(--soft)}
+  .note{font-size:.85rem;color:var(--soft);margin-top:20px}
+
+  .visit{background:var(--lilac)}
+  .cols{display:grid;gap:26px;margin-top:26px}
+  .panel{background:#fff;border-radius:18px;padding:24px;border:2px solid var(--ink)}
+  .panel h3{font-family:var(--head);margin-bottom:10px;font-size:1.2rem}
+  .panel ul{list-style:none;padding:0}
+  .panel li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed #c9c8e6}
+  .panel li:last-child{border:0}
+  .panel li span:last-child{font-weight:700;text-align:right}
+  .panel .btn{margin-top:16px;background:var(--navy);color:#fff;box-shadow:0 4px 0 #000}
+
+  .contact{text-align:center}
+  .contact .sub{margin-inline:auto}
+  footer{padding:26px 0 90px;text-align:center;font-size:.85rem;color:var(--soft);border-top:1px solid #e5e2d6}
+  footer a{font-weight:700}
+
+  @media(min-width:720px){
+    nav{display:flex}
+    .hero{padding-top:84px}
+    .courses{grid-template-columns:repeat(2,1fr)}
+    .cols{grid-template-columns:1fr 1fr}
+    section{padding:84px 0}
+    .stats strong{font-size:1.6rem}
+  }
+  @media(min-width:980px){.courses{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><b aria-hidden="true">B</b>Brightpath</a>
+    <nav aria-label="Main"><a href="#courses">Courses</a><a href="#visit">Timings</a><a href="#visit">Location</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="#contact">Free demo</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Johar Town, Lahore</p>
+      <h1>Small classes. <span>Real progress.</span></h1>
+      <p class="lede">Matric, O and A Level, MDCAT and IELTS with weekly tests and a monthly report for parents. Try a class free first.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Book a free demo class</a>
+        <a class="btn ghost" href="#courses">See courses and fees</a>
+      </div>
+      <div class="stats">
+        <div><strong>Mon to Sat</strong><span>3 pm to 9 pm</span></div>
+        <div><strong>Weekly</strong><span>tests</span></div>
+        <div><strong>Monthly</strong><span>parent report</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="courses">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#b88700">Courses</p>
+      <h2>Pick your level, see the fee.</h2>
+      <p class="sub">Sample fees for this demo. Sibling discounts are available.</p>
+      <div class="courses">
+        <article class="course"><h3>Matric (Class 9 and 10)</h3><p>Science and arts groups, weekly tests, past-paper practice.</p><div class="fee">Rs 6,000 <small>per subject per month</small></div></article>
+        <article class="course"><h3>O and A Level</h3><p>Maths, sciences and English with Cambridge past papers.</p><div class="fee">Rs 9,000 <small>per subject per month</small></div></article>
+        <article class="course"><h3>MDCAT preparation</h3><p>Full syllabus course with weekly mock tests.</p><div class="fee">Rs 25,000 <small>per month</small></div></article>
+        <article class="course"><h3>IELTS course</h3><p>Speaking, writing, reading and listening with mock exams.</p><div class="fee">Rs 18,000 <small>per 8-week course</small></div></article>
+        <article class="course"><h3>Free demo class</h3><p>Sit in on one class before you decide, no obligation.</p><div class="fee">Free</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#b88700">Visit</p>
+      <h2>Timings and location.</h2>
+      <div class="cols">
+        <div class="panel">
+          <h3>Class timings</h3>
+          <ul aria-label="Timings">
+            <li><span>Monday to Saturday</span><span>3:00 pm to 9:00 pm</span></li>
+            <li><span>Office</span><span>from 2:00 pm</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Find us</h3>
+          <p>Block 00, Main Road, Johar Town, Lahore</p>
+          <p class="note">Fictional address for this demo.</p>
+          <a class="btn" href="https://www.openstreetmap.org/search?query=Johar%20Town%20Lahore" target="_blank" rel="noopener">Open map</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#b88700">Contact</p>
+      <h2>Ask the chat, or leave your details.</h2>
+      <p class="sub">The chat button at the bottom right answers common questions in English or Roman Urdu and sends your enquiry to our WhatsApp.</p>
+      <p class="note">Phone: 0300-0000000 (placeholder number)</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Demo site, fictional business. Built to show a website chat assistant. <a href="../index.html">Back to the pitch page</a></div>
+</footer>
+
+<script src="../widget.js" data-config="academy.json"></script>
+</body>
+</html>

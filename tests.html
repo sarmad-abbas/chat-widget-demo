@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matcher tests</title>
+<style>
+  body{font:15px/1.5 system-ui,sans-serif;max-width:900px;margin:0 auto;padding:20px;color:#1a2320}
+  h1{font-size:1.4rem}h2{font-size:1.1rem;margin-top:28px}
+  #summary{font-weight:700;padding:10px 14px;border-radius:8px;background:#eee}
+  #summary.ok{background:#d7f3df}#summary.bad{background:#fbd9d9}
+  table{border-collapse:collapse;width:100%;margin-top:8px}
+  td,th{border:1px solid #ddd;padding:5px 8px;text-align:left;font-size:.9rem}
+  .pass{background:#e8f8ed}.fail{background:#fdeaea;font-weight:700}
+  code{background:#f2f2f2;padding:1px 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>FAQ matcher tests</h1>
+<p>Runs sample questions through <code>DemoChat.match()</code> for each config. "fallback" means the bot should admit it does not know.</p>
+<div id="summary">Running...</div>
+<div id="out"></div>
+<script src="widget.js"></script>
+<script>
+// [question, expected id]
+var SUITES = [
+  { name: 'Dental clinic', config: 'dental/clinic.json', cases: [
+    ['hello', 'greeting'], ['Assalam o Alaikum', 'greeting'], ['salam', 'greeting'], ['hellooo', 'greeting'],
+    ['what are your opening hours?', 'hours'], ['kab khulta hai', 'hours'], ['timing kya hai', 'hours'],
+    ['wat is ur timming', 'hours'], ['Sunday ko open hain?', 'hours'], ['kitne baje band hota hai', 'hours'],
+    ['where are you located', 'location'], ['clinic kahan hai', 'location'], ['adress please', 'location'], ['Gulberg mein kidhar?', 'location'],
+    ['how much is teeth whitening', 'service-price:whitening'], ['whitening ki fees kitni hai', 'service-price:whitening'],
+    ['root canal ka kharcha', 'service-price:rootcanal'], ['what are your prices', 'price'], ['fees kitni hai', 'price'],
+    ['do you do braces', 'service:braces'], ['safai ho jati hai?', 'service:checkup'],
+    ['I want to book an appointment', 'booking'], ['appointment lena hai', 'booking'], ['apointment', 'booking'],
+    ['does it hurt', 'faq:pain'], ['dard hoga kya', 'faq:pain'], ['do you treat kids', 'faq:kids'],
+    ['lady doctor hai?', 'faq:female'], ['do you accept jazzcash', 'faq:payment'], ['insurance chalti hai', 'faq:insurance'],
+    ['thanks', 'thanks'], ['shukriya', 'thanks'], ['I want to speak to someone, whatsapp number?', 'contact'],
+    ['what is the capital of France', 'fallback'], ['who won the cricket match yesterday', 'fallback'],
+    ['mujhe pizza chahiye', 'fallback'], ['asdf qwerty', 'fallback'], ['can you fix my laptop', 'fallback'], ['', 'fallback']
+  ]},
+  { name: 'Coaching academy', config: 'academy/academy.json', cases: [
+    ['hi', 'greeting'], ['assalamualaikum', 'greeting'], ['hey there', 'greeting'],
+    ['class timings?', 'hours'], ['kab khulta hai academy', 'hours'], ['kitne baje chhutti hoti hai', 'hours'],
+    ['when do you close', 'hours'], ['sunday open?', 'hours'],
+    ['where is the academy', 'location'], ['Johar Town mein kahan hai', 'location'], ['location bhej do', 'location'],
+    ['mdcat fee', 'service-price:mdcat'], ['ielts kitne ka hai', 'service-price:ielts'], ['O level fees', 'service-price:olevel'],
+    ['matric ki fees kitni hai', 'service-price:matric'], ['what are the fees', 'price'], ['qeemat batao', 'price'],
+    ['tell me about the ielts course', 'service:ielts'], ['do you teach mdcat', 'service:mdcat'], ['what courses do you offer', 'services'],
+    ['book a demo class', 'booking'], ['dakhla lena hai', 'booking'], ['I want admission', 'booking'],
+    ['how many students per batch', 'faq:batch'], ['teachers kaise hain', 'faq:teachers'], ['weekly test hota hai?', 'faq:tests'],
+    ['online classes hain?', 'faq:online'], ['larkiyon ka alag batch', 'faq:boys-girls'], ['installments possible?', 'faq:fee-payment'],
+    ['thank you', 'thanks'], ['allah hafiz', 'thanks'], ['contact number do', 'contact'],
+    ['what is the weather in Karachi', 'fallback'], ['cryptocurrency kaise kharidte hain', 'fallback'], ['tell me a joke', 'fallback'],
+    ['zzzzzz', 'fallback'], ['mera laptop kharab hai', 'fallback'], ['   ', 'fallback']
+  ]}
+];
+
+(async function () {
+  var out = document.getElementById('out'), total = 0, passed = 0;
+  for (var s = 0; s < SUITES.length; s++) {
+    var suite = SUITES[s], cfg;
+    var h = document.createElement('h2'); out.appendChild(h);
+    try { cfg = await (await fetch(suite.config)).json(); }
+    catch (e) { h.textContent = suite.name + ': could not load ' + suite.config + ' (serve this folder over http)'; continue; }
+    var tbl = document.createElement('table');
+    tbl.innerHTML = '<tr><th>Question</th><th>Expected</th><th>Got</th><th>Conf.</th><th></th></tr>';
+    var p = 0;
+    suite.cases.forEach(function (c) {
+      var r = DemoChat.match(cfg, c[0]), ok = r.id === c[1];
+      total++; if (ok) { passed++; p++; }
+      var tr = document.createElement('tr'); tr.className = ok ? 'pass' : 'fail';
+      [JSON.stringify(c[0]), c[1], r.id, r.confidence.toFixed(2), ok ? 'PASS' : 'FAIL'].forEach(function (t) {
+        var td = document.createElement('td'); td.textContent = t; tr.appendChild(td);
+      });
+      tbl.appendChild(tr);
+    });
+    h.textContent = suite.name + ': ' + p + ' / ' + suite.cases.length + ' passed';
+    out.appendChild(tbl);
+  }
+  var sum = document.getElementById('summary');
+  sum.textContent = passed + ' / ' + total + ' passed';
+  sum.className = passed === total ? 'ok' : 'bad';
+  window.TEST_RESULT = { passed: passed, total: total };
+})();
+</script>
+</body>
+</html>

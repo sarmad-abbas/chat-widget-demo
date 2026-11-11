@@ -1,0 +1,69 @@
+{
+  "businessName": "Brightpath Coaching Academy",
+  "brandColor": "#f5b301",
+  "launcherLabel": "Ask us anything",
+  "whatsappNumber": "920000000000",
+  "whatsappIsPlaceholder": true,
+  "phoneDisplay": "0300-0000000 (placeholder)",
+  "welcome": "Assalam o Alaikum! Welcome to Brightpath Coaching Academy. Ask about classes, fees, timings or a free demo class. English ya Roman Urdu, dono chalega.",
+  "address": "Block 00, Main Road, Johar Town, Lahore (fictional address)",
+  "mapUrl": "https://www.openstreetmap.org/search?query=Johar%20Town%20Lahore",
+  "hours": [
+    { "days": "Mon to Sat", "time": "3:00 pm to 9:00 pm (classes), office open from 2:00 pm" },
+    { "days": "Sunday", "time": "Closed" }
+  ],
+  "hoursNote": "Exam-season extra batches are announced on WhatsApp.",
+  "priceNote": "Sample monthly fees for this demo. Sibling discounts are available, ask the team.",
+  "services": [
+    { "id": "matric", "name": "Matric (Class 9 and 10)", "price": "Rs 6,000 per subject per month", "description": "Science and arts groups, weekly tests, past-paper practice.", "keywords": ["matric", "class 9", "class 10", "9th", "10th", "ninth", "tenth", "bise"] },
+    { "id": "olevel", "name": "O and A Level", "price": "Rs 9,000 per subject per month", "description": "Maths, physics, chemistry, biology and English with Cambridge past papers.", "keywords": ["olevel", "o level", "a level", "alevel", "cambridge", "igcse", "edexcel"] },
+    { "id": "mdcat", "name": "MDCAT preparation", "price": "Rs 25,000 per month", "description": "Full syllabus course with weekly mock tests.", "keywords": ["mdcat", "mcat", "medical", "entry test", "doctor"] },
+    { "id": "ielts", "name": "IELTS course", "price": "Rs 18,000 per 8-week course", "description": "Speaking, writing, reading and listening practice with mock exams.", "keywords": ["ielts", "english test", "band score", "speaking"] },
+    { "id": "demo", "name": "Free demo class", "price": "Free", "description": "Sit in on one class before you decide, no obligation.", "keywords": ["demo", "trial", "free class", "try"] }
+  ],
+  "faqs": [
+    {
+      "id": "batch",
+      "questions": ["What are the batch sizes?", "How many students in a class?", "Class mein kitne students hote hain?"],
+      "keywords": ["batch", "batches", "students", "strength", "size", "bachay", "talba"],
+      "answer": "Batches are capped at 15 students (sample answer for this demo) so every student gets attention."
+    },
+    {
+      "id": "teachers",
+      "questions": ["Who are the teachers?", "Are teachers experienced?", "Teachers kaise hain?"],
+      "keywords": ["teacher", "teachers", "tutor", "tutors", "faculty", "ustaad", "ustad", "sir", "miss", "staff"],
+      "answer": "Each subject is taught by a teacher with several years of experience at that level. You can meet the teacher at the free demo class."
+    },
+    {
+      "id": "tests",
+      "questions": ["Do you take weekly tests?", "How do you track progress?", "Test hote hain kya?"],
+      "keywords": ["test", "tests", "progress", "report", "result", "results", "marks", "monthly"],
+      "answer": "There is a short test every week and a progress report to parents every month."
+    },
+    {
+      "id": "online",
+      "questions": ["Are online classes available?", "Can my child attend from home?", "Online classes hain?"],
+      "keywords": ["online", "zoom", "remote", "ghar", "recorded", "recording"],
+      "answer": "Classes are held in person. Ask the team on WhatsApp if you need an online option for a particular course."
+    },
+    {
+      "id": "boys-girls",
+      "questions": ["Are there separate batches for girls?", "Girls batch available?", "Larkiyon ka alag batch hai?"],
+      "keywords": ["girls", "girl", "boys", "separate", "larkiyon", "larkion", "ladkiyon", "alag"],
+      "answer": "Yes, separate boys and girls batches are available for most courses. Tell us your preference when you enquire."
+    },
+    {
+      "id": "fee-payment",
+      "questions": ["How do I pay the fee?", "Can I pay in installments?", "Fee kaise jama karwani hai?"],
+      "keywords": ["installment", "installments", "jama", "easypaisa", "jazzcash", "transfer", "qist", "qistain"],
+      "answer": "Fees are paid monthly in advance by cash, bank transfer or mobile wallet. Ask the team about instalments for long courses."
+    }
+  ],
+  "extraKeywords": {
+    "location": ["johar", "town", "wapda", "emporium"],
+    "booking": ["demo class", "join", "admission lena", "dakhla"]
+  },
+  "quickReplies": ["Courses and fees", "Class timings", "Where are you?", "Book a free demo"],
+  "timeChips": ["This week", "Next week", "After exams"],
+  "aiMode": { "enabled": false, "endpoint": "http://localhost:11434", "model": "llama3.2", "timeoutMs": 15000 }
+}
