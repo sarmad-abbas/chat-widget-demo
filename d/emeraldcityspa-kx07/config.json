@@ -1,0 +1,47 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Emerald City Day Spa (unofficial demo)",
+  "brandColor": "#1f6b4f",
+  "handoff": "email",
+  "contactEmail": "relax@emeraldcitydayspa.com",
+  "phoneDisplay": "612-354-2697",
+  "phoneNumber": "+16123542697",
+  "address": "Suite #247, Gaviidae Commons Shopping Center, 651 Nicollet Mall, Downtown Minneapolis",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Emerald City Day Spa website. Ask about booking, cancellations, walk-ins, parking or opening hours, or leave an enquiry.",
+  "hours": [
+    { "days": "Tuesday to Saturday", "time": "9:30am to 6:30pm (appointments booked in advance)" },
+    { "days": "Sunday and Monday", "time": "By appointment only" }
+  ],
+  "hoursNote": "The spa is by appointment only and does not take walk-ins. Source: the contact page.",
+  "quickReplies": ["Opening hours", "Cancellation policy", "Do you take walk-ins?", "Where do I park?"],
+  "timeChips": ["Weekday", "Saturday", "Not sure yet"],
+  "services": [
+    { "id": "massage", "name": "Massage", "description": "Listed on the spa's services menu. One review on the site mentions 30 minute sessions and a hot stone element, but please check the website or ask the team for current details.", "keywords": ["massage", "massages", "hot stone"] },
+    { "id": "facials", "name": "Facials", "description": "Listed on the spa's services menu. Please see the website or contact the team for details.", "keywords": ["facial", "facials", "dermaplaning"] },
+    { "id": "nails", "name": "Nails", "description": "Listed on the spa's services menu. Please see the website or contact the team for details.", "keywords": ["nails", "manicure", "pedicure", "mani", "gel"] },
+    { "id": "waxing", "name": "Waxing", "description": "Listed on the spa's services menu. Please see the website or contact the team for details.", "keywords": ["waxing", "wax"] },
+    { "id": "body", "name": "Body treatments", "description": "Listed on the spa's services menu. Please see the website or contact the team for details.", "keywords": ["body treatment", "body treatments", "body"] },
+    { "id": "sauna", "name": "Amenities and sauna experience", "description": "Listed on the spa's services menu (amenities and sauna experience). Please see the website for details.", "keywords": ["sauna", "amenities", "infrared"] },
+    { "id": "parties", "name": "Spa parties and events, getaway packages", "description": "Listed on the spa's services menu. Please contact the team to plan one.", "keywords": ["party", "parties", "events", "getaway", "package", "packages", "group"] }
+  ],
+  "faqs": [
+    { "id": "cancel", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["What is your cancellation policy?", "How do I cancel?"], "keywords": ["cancel", "cancellation", "cancelled", "refund", "refundable"], "answer": "Cancellations must be received at least 24 hours before a single-service appointment or 48 hours before a multi-service appointment, by email at relax@emeraldcitydayspa.com or online. Payments are non-refundable once pre-charged; if a guest does not show or cancels after being charged, the payment is applied as a cancellation fee." },
+    { "id": "same-day", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["Why can't I cancel on the same day?", "Can I cancel on the day?"], "keywords": ["same day cancel", "same-day cancel", "last minute", "day of"], "answer": "Staff are scheduled according to the day's appointments and technicians earn their living by performing services, so the spa asks for 24 hours' notice. To change or cancel on the day itself, call 612-354-2697." },
+    { "id": "late", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["What if I am late for my appointment?", "How late can I arrive?"], "keywords": ["late", "running late", "late arrival", "arrive late"], "answer": "A late arrival of 10 or more minutes past the agreed start time is subject to cancellation. The spa reserves the right to cancel or downgrade services for late arrivals." },
+    { "id": "illness", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["What if I am ill or have been exposed to Covid-19?", "Can I reschedule if I am sick?"], "keywords": ["covid", "illness", "sick", "ill", "exposed", "medical emergency"], "answer": "Guests may reschedule because of possible COVID exposure or illness as late as 8:00am on the day of service, by email only. Pre-charged funds are non-refundable but can be applied to rescheduled services if proper notice is given." },
+    { "id": "walkin", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["Do you take walk-ins?", "Can I just turn up?"], "keywords": ["walk in", "walk-in", "walkin", "walk-ins", "drop in", "turn up"], "answer": "No. The spa is appointment-only and does not accept walk-ins. Same-day appointments typically need at least 2 to 4 hours' notice. If you cannot find the service or time you want online, call 612-354-2697." },
+    { "id": "book", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["How can I book an appointment?", "Can I book online?"], "keywords": ["book", "booking", "appointment", "online booking"], "answer": "The spa recommends booking online whenever possible. If you cannot find a time that fits, email relax@emeraldcitydayspa.com or call and leave a message.", "action": "booking" },
+    { "id": "couples", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["How do I book couples or group appointments?", "Can we book together?"], "keywords": ["couples", "couple", "group", "groups", "together"], "answer": "Online booking for group and couples services was having technical difficulties. You can book separate appointments for each person, or email relax@emeraldcitydayspa.com with your request; email is the best way to discuss options." },
+    { "id": "card", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["Why is a credit card required for booking?", "Do I need to pay up front?"], "keywords": ["credit card", "card required", "card on file", "deposit", "charged"], "answer": "A credit card is taken to secure each appointment and confirm the 24-hour cancellation policy. If you cancel with less than 24 hours' notice, the card on file will be charged in full." },
+    { "id": "levels", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["What do the technician levels mean?", "Is a more expensive technician more skilled?"], "keywords": ["technician levels", "level 1", "level 4", "levels", "more skilled", "technician"], "answer": "Each service provider starts at Level 1 and can work up to Level 4 through promotions based on client feedback, product knowledge, specialty services and client care. A higher-priced technician is not necessarily more skilled overall; they may be more skilled in a specific area." },
+    { "id": "lobby", "source": "https://emeraldcitydayspa.com/faq/", "questions": ["Can I drop by to buy products?", "Is the lobby open?"], "keywords": ["lobby", "shop", "products", "store", "buy products", "online store"], "answer": "The spa is staffed according to scheduled appointments, so a team member may not be available for drop-ins or in-store shopping. Please call or email ahead to arrange a time, or use the online store." },
+    { "id": "parking", "source": "https://emeraldcitydayspa.com/contact/", "questions": ["Where do I park?", "Is there parking nearby?"], "keywords": ["parking", "park", "ramp", "iparkit"], "answer": "The best place to park is the Gaviidae Commons iParkit Parking Ramp on 6th Street between Marquette Avenue and Nicollet Mall. If you need help with directions, call 612-354-2697." },
+    { "id": "location", "source": "https://emeraldcitydayspa.com/contact/", "questions": ["Where are you located?", "What is your address?"], "keywords": ["located", "directions", "nicollet", "gaviidae", "skyway", "suite"], "answer": "The spa is in Suite #247 in the Gaviidae Commons Shopping Center at 651 Nicollet Mall, Downtown Minneapolis." }
+  ],
+  "selfTests": [
+    ["what is your cancellation policy", "faq:cancel"], ["do you take walk-ins", "faq:walkin"], ["where do i park", "faq:parking"], ["what are your opening hours", "hours"],
+    ["i am running late", "faq:late"], ["what is the capital of France", "fallback"], ["do you do haircuts", "fallback"], ["tell me a joke", "fallback"]
+  ]
+}

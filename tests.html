@@ -56,6 +56,42 @@ var SUITES = [
   ]}
 ];
 
+// Handoff-mode tests (new in widget 1.1): email, phone, and the unchanged whatsapp default.
+var HANDOFF_CFGS = {
+  email: { businessName: 'Test Dental', handoff: 'email', contactEmail: 'hello@example.com', phoneDisplay: '020 7946 0000',
+    hours: [{ days: 'Mon to Fri', time: '9am to 5pm' }], address: '1 Test Street, London',
+    services: [{ id: 'hyg', name: 'Hygienist', description: 'Cleaning visit.', keywords: ['hygienist', 'clean'] }],
+    faqs: [{ id: 'parking', questions: ['Is there parking?'], keywords: ['parking'], answer: 'Yes, on the street.' }] },
+  phone: { businessName: 'Test Vets', handoff: 'phone', phoneDisplay: '(555) 010-0000', phoneNumber: '+15550100000', services: [], faqs: [] },
+  wa: { businessName: 'Test WA', whatsappNumber: '923001234567', services: [], faqs: [] }
+};
+function handoffTests() {
+  var E = HANDOFF_CFGS.email, P = HANDOFF_CFGS.phone, W = HANDOFF_CFGS.wa, rows = [];
+  function t(name, cond) { rows.push([name, !!cond]); }
+  var sum = 'Hello Test, I would like to enquire.\nName: Ann & Bo\nNeed: a "clean"?';
+  var h = DemoChat.buildHandoff(E, sum), u = h.href.replace(/^mailto:/, '').split('?');
+  var q = new URLSearchParams(u[1]);
+  t('email: mailto link to published address', h.mode === 'email' && h.href.indexOf('mailto:hello@example.com?') === 0);
+  t('email: summary prefilled and decodes intact (CRLF)', q.get('body') === sum.replace(/\n/g, '\r\n') && q.get('subject') === 'Website enquiry');
+  t('email: invalid address gives no link', DemoChat.buildHandoff({ handoff: 'email', contactEmail: 'bad address' }, 'x').href === '');
+  t('email: header-injection chars rejected', DemoChat.buildHandoff({ handoff: 'email', contactEmail: 'a@b.com,c@d.com' }, 'x').href === '');
+  t('phone: tel link, digits and plus only', DemoChat.buildHandoff(P, 'x').href === 'tel:+15550100000');
+  t('phone: falls back to display number', DemoChat.buildHandoff({ handoff: 'phone', phoneDisplay: '020 7946 0000' }, 'x').href === 'tel:02079460000');
+  t('phone: no number gives no link', DemoChat.buildHandoff({ handoff: 'phone' }, 'x').href === '');
+  var w = DemoChat.buildHandoff(W, 'hi there');
+  t('whatsapp default unchanged', w.mode === 'whatsapp' && w.href === 'https://wa.me/923001234567?text=hi%20there');
+  t('unknown mode falls back to whatsapp', DemoChat.buildHandoff({ handoff: 'sms', whatsappNumber: '1' }, 'x').mode === 'whatsapp');
+  var fb = DemoChat.match(E, 'what is the capital of France');
+  t('email mode: fallback says contact the team, no WhatsApp', fb.id === 'fallback' && /contact the team/.test(fb.answer) && !/whatsapp/i.test(fb.answer));
+  t('email mode: opening hours answered from config', /9am to 5pm/.test(DemoChat.match(E, 'what are your opening hours').answer));
+  t('email mode: faq answered', DemoChat.match(E, 'is there parking?').id === 'faq:parking');
+  t('email mode: unlisted prices not invented', /not listed/.test(DemoChat.match(E, 'how much does it cost').answer));
+  t('phone mode: missing hours falls back to contact the team', /contact the team/.test(DemoChat.match(P, 'when are you open').answer));
+  t('phone mode: greeting has no Assalam', !/assalam/i.test(DemoChat.match(P, 'hello').answer));
+  t('whatsapp default: fallback still mentions WhatsApp', /WhatsApp/.test(DemoChat.match(W, 'what is the capital of France').answer));
+  return rows;
+}
+
 (async function () {
   var out = document.getElementById('out'), total = 0, passed = 0;
   for (var s = 0; s < SUITES.length; s++) {
@@ -78,6 +114,15 @@ var SUITES = [
     h.textContent = suite.name + ': ' + p + ' / ' + suite.cases.length + ' passed';
     out.appendChild(tbl);
   }
+  var hh = document.createElement('h2'); out.appendChild(hh);
+  var ht = document.createElement('table'); ht.innerHTML = '<tr><th>Handoff test</th><th></th></tr>'; var hp = 0, hr = handoffTests();
+  hr.forEach(function (r) {
+    total++; if (r[1]) { passed++; hp++; }
+    var tr = document.createElement('tr'); tr.className = r[1] ? 'pass' : 'fail';
+    [r[0], r[1] ? 'PASS' : 'FAIL'].forEach(function (x) { var td = document.createElement('td'); td.textContent = x; tr.appendChild(td); });
+    ht.appendChild(tr);
+  });
+  hh.textContent = 'Handoff modes (email / phone / whatsapp): ' + hp + ' / ' + hr.length + ' passed'; out.appendChild(ht);
   var sum = document.getElementById('summary');
   sum.textContent = passed + ' / ' + total + ' passed';
   sum.className = passed === total ? 'ok' : 'bad';

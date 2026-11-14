@@ -1,0 +1,48 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Sandymount Vets (unofficial demo)",
+  "brandColor": "#2f6b57",
+  "handoff": "email",
+  "contactEmail": "info@sandymountvets.ie",
+  "phoneDisplay": "01 269 5830",
+  "phoneNumber": "+35312695830",
+  "address": "15c Gilford Road, Sandymount, Dublin 4, D04 HK72",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Sandymount Vets website. Ask about opening hours, the healthcare plan, pet passports or booking, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday to Friday (reception)", "time": "8:00 AM to 7:00 PM" },
+    { "days": "Monday to Friday (consulting)", "time": "9:30 AM to 4:30 PM and 6:00 PM to 7:00 PM" },
+    { "days": "Saturday (reception)", "time": "9:00 AM to 12:00 PM" },
+    { "days": "Saturday (consulting)", "time": "9:30 AM to 12:00 PM" }
+  ],
+  "hoursNote": "Consultations are by appointment only. Source: the clinic's contact page.",
+  "quickReplies": ["Opening hours", "Healthcare plan", "Pet passports", "How do I book?"],
+  "timeChips": ["Weekday morning", "Weekday evening", "Saturday morning"],
+  "services": [
+    { "id": "dental", "name": "Dental health", "description": "Listed among the clinic's services; the practice has equipment for dental treatment.", "keywords": ["dental", "teeth", "tooth", "dentistry"] },
+    { "id": "diagnostics", "name": "Diagnostics", "description": "Listed among the clinic's services. Please contact the team for details.", "keywords": ["diagnostics", "diagnostic", "tests", "bloods"] },
+    { "id": "nutrition", "name": "Nutrition", "description": "The nursing team can advise on diet; the practice works with Royal Canin.", "keywords": ["nutrition", "diet", "food", "feed", "feeding"] },
+    { "id": "ortho", "name": "Orthopaedics", "description": "Listed among the clinic's services (orthopaedic referrals). Please contact the team for details.", "keywords": ["orthopaedics", "orthopaedic", "orthopedic", "bones", "joint"] },
+    { "id": "passport", "name": "Pet passports", "description": "Includes the pet passport, rabies vaccination, travel health certificate, microchipping and advice on stress-free travel.", "keywords": ["passport", "passports", "travel", "rabies", "microchip", "microchipping"] },
+    { "id": "wellness", "name": "Wellness checks and vaccinations", "description": "Listed among the clinic's services. Please contact the team for details.", "keywords": ["wellness", "vaccination", "vaccinations", "vaccine", "vaccines", "booster", "check up"] }
+  ],
+  "faqs": [
+    { "id": "book", "source": "https://sandymountvets.ie/frequently-asked-questions/", "questions": ["How do I make an appointment?", "How do I book?"], "keywords": ["make an appointment"], "answer": "You can book online on the clinic's website, email info@sandymountvets.ie, or call 01 269 5830. Consultations are by appointment only.", "action": "booking" },
+    { "id": "register", "source": "https://sandymountvets.ie/", "questions": ["How do I register my pet?", "Can I register as a new client?"], "keywords": ["register", "registration", "new client", "new pet"], "answer": "To register your pet, call 01 269 5830 or email info@sandymountvets.ie." },
+    { "id": "emergency", "source": "https://sandymountvets.ie/contact-us/", "questions": ["What if my pet has an emergency?", "Who do I call out of hours?"], "keywords": ["emergency", "out of hours", "overnight", "weekend", "urgent"], "answer": "For emergencies, phone the practice first on 01 269 5830. Outside opening hours the clinic works with the Pet Emergency Hospital on the UCD campus on the N11, which asks you to phone before you arrive." },
+    { "id": "plan", "source": "https://sandymountvets.ie/healthcare-plan/", "questions": ["Do you have a pet healthcare plan?", "How much is the healthcare plan?"], "keywords": ["healthcare plan", "health plan", "care plan", "plan", "monthly"], "answer": "Yes. The healthcare plan is from €17 per month (dogs from €18, cats from €17). It includes routine vaccinations and monthly flea and worming treatments, plus discounts on dental procedures and on pet food. See the clinic's Healthcare Plan page for details." },
+    { "id": "samevet", "source": "https://sandymountvets.ie/frequently-asked-questions/", "questions": ["Will my pet see the same vet every time?", "Can I choose my vet?"], "keywords": ["same vet", "continuity", "choose vet", "which vet"], "answer": "You can ask to see the same vet each time. All the vets keep detailed medical records, so your pet's treatment plan continues smoothly if your usual vet is not available." },
+    { "id": "neuter", "source": "https://sandymountvets.ie/frequently-asked-questions/", "questions": ["Do you neuter pets?", "Do you spay and castrate?"], "keywords": ["neuter", "neutering", "spay", "spaying", "castrate", "castration"], "answer": "Yes. The clinic routinely spays and castrates dogs, cats and rabbits. Call 01 269 5830 to discuss it with the team." },
+    { "id": "teeth", "source": "https://sandymountvets.ie/frequently-asked-questions/", "questions": ["Do I need to brush my pet's teeth?", "How do I look after my pet's teeth?"], "keywords": ["brush", "brushing", "toothbrush"], "answer": "Home dental care helps prevent problems such as caries and periodontal disease. The nurses can show you how to brush your pet's teeth, and the practice has the equipment for dental treatment." },
+    { "id": "food", "source": "https://sandymountvets.ie/frequently-asked-questions/", "questions": ["What food should I feed my pet?", "Which diet is best?"], "keywords": ["what food", "royal canin", "diet advice"], "answer": "Pets need a diet suited to their species and life stage, ideally a good-quality complete food. The practice works with Royal Canin and the nursing team can advise you." },
+    { "id": "passport-faq", "source": "https://sandymountvets.ie/pet-passports/", "questions": ["Can you do a pet passport for travel?", "What does the pet passport include?"], "keywords": ["pet passport", "passport", "travel certificate", "holiday", "abroad"], "answer": "Yes. The pet passport service includes the passport, rabies vaccination, travel health certificate, microchipping and advice on stress-free travel. Book an appointment to arrange it." },
+    { "id": "independent", "source": "https://sandymountvets.ie/", "questions": ["Are you an independent clinic?", "How long have you been open?"], "keywords": ["independent", "established", "since", "how long open"], "answer": "Sandymount Vets describes itself as an independent clinic, registered with the Veterinary Council of Ireland, serving its local community since 1998." },
+    { "id": "who", "source": "https://sandymountvets.ie/", "questions": ["What pets do you treat?", "Do you treat cats and dogs?"], "keywords": ["cats", "dogs", "rabbits", "pets", "animals"], "answer": "The practice describes itself as a companion animal clinic. The website mentions dogs, cats and rabbits. For other animals, please contact the team." }
+  ],
+  "selfTests": [
+    ["what are your opening hours", "hours"], ["how much is the healthcare plan", "faq:plan"], ["can you do a pet passport", "faq:passport-faq"],
+    ["do you spay cats", "faq:neuter"], ["what is the capital of France", "fallback"], ["how much is a vaccination", "service-price:wellness"],
+    ["can you groom my dog", "fallback"], ["what if there is an emergency at night", "faq:emergency"]
+  ]
+}

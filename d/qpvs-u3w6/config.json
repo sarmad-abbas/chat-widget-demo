@@ -1,0 +1,45 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Queens Park Veterinary Surgery (unofficial demo)",
+  "brandColor": "#8a4b1f",
+  "handoff": "email",
+  "contactEmail": "info@qpvs.co.uk",
+  "phoneDisplay": "01204 525066",
+  "phoneNumber": "+441204525066",
+  "address": "74-76 Chorley New Road, Bolton, Greater Manchester, BL1 4BY",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Queens Park Veterinary Surgery website. Ask about opening hours, emergencies, parking or the Healthy Pets Plan, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday", "time": "8am to 7pm" },
+    { "days": "Tuesday", "time": "8am to 4pm" },
+    { "days": "Wednesday to Friday", "time": "8am to 7pm" },
+    { "days": "Saturday", "time": "8.30am to 12pm" },
+    { "days": "Sunday and Bank Holidays", "time": "Closed" }
+  ],
+  "hoursNote": "Source: the contact page. Out of hours cover is provided by Petmedics.",
+  "quickReplies": ["Opening hours", "What if it is an emergency?", "Is there parking?", "Healthy Pets Plan"],
+  "timeChips": ["Weekday morning", "Weekday evening", "Saturday morning"],
+  "services": [
+    { "id": "consult", "name": "Vet and nurse consultations", "description": "Consultation appointments are 15 minutes long. For a complex issue the practice provides a double appointment at no extra cost.", "keywords": ["consultation", "consultations", "appointment length", "vet consult", "nurse consult"] },
+    { "id": "vacc", "name": "Vaccinations and puppy/kitten clinics", "description": "Listed among the practice's services. Please contact the team for details.", "keywords": ["vaccination", "vaccinations", "vaccine", "vaccines", "puppy", "kitten", "booster"] },
+    { "id": "surgery", "name": "Surgery", "description": "Surgery ranges from routine neutering to lump removals, dental surgery and diagnostic x-rays. If your pet cannot be treated at the practice, they will recommend and organise referral to a specialist.", "keywords": ["surgery", "neutering", "neuter", "operation", "lump", "dental", "x-ray", "xray"] },
+    { "id": "blood", "name": "In-house blood tests", "description": "In-house blood machines allow many blood tests with results almost straight away; some tests are sent to a laboratory and take a few days.", "keywords": ["blood test", "blood tests", "bloods", "laboratory", "diagnostic"] }
+  ],
+  "faqs": [
+    { "id": "emergency", "source": "https://qpvs.co.uk/emergencies/", "questions": ["What if my pet has an emergency?", "What do I do in an emergency?"], "keywords": ["emergency", "emergencies", "urgent", "first aid"], "answer": "Head straight to the surgery, and if you can, phone 01204 525066 first so the team can prepare. If you are unsure how to respond, phone and they can advise on moving your pet safely and emergency first aid. Emergencies take priority over routine appointments during normal hours." },
+    { "id": "ooh", "source": "https://qpvs.co.uk/emergencies/", "questions": ["Who covers out of hours?", "Who do I call when you are closed?"], "keywords": ["out of hours", "when closed", "overnight", "night", "petmedics", "weekend", "sunday"], "answer": "When the surgery is closed, out-of-hours cover is provided by Petmedics in Worsley (Unit A1, Priestley Road, Wardley Business Park, M28 2LY), open 24 hours a day, 7 days a week, on 0161 794 4999." },
+    { "id": "parking", "source": "https://qpvs.co.uk/contact-us/", "questions": ["Is there parking?", "Where do I park?"], "keywords": ["parking", "park", "car park"], "answer": "There is an on-site client car park at the rear of the surgery. Access to the entrance is via a footpath around the side of the building." },
+    { "id": "find", "source": "https://qpvs.co.uk/contact-us/", "questions": ["Where are you located?", "How do I find you?"], "keywords": ["find you", "directions", "war memorial", "chorley new road"], "answer": "The surgery is at 74-76 Chorley New Road, Bolton, BL1 4BY, opposite the war memorial. If you have trouble finding it, call 01204 525066 and the team can give you directions." },
+    { "id": "book", "source": "https://qpvs.co.uk/contact-us/", "questions": ["How do I book an appointment?", "Can I book through the contact form?"], "keywords": ["book", "booking", "prescription", "prescriptions", "repeat prescription"], "answer": "Please phone 01204 525066 for appointments and prescription requests. The contact form cannot be used to book appointments or request prescriptions.", "action": null },
+    { "id": "appt-length", "source": "https://qpvs.co.uk/", "questions": ["How long is an appointment?", "Do you do evening appointments?"], "keywords": ["how long", "length", "evening", "morning", "afternoon", "double appointment"], "answer": "Consulting sessions run every weekday with morning, afternoon and evening appointments (open until 7pm Monday to Friday, except Tuesday, which closes at 4pm), and on Saturday morning. Consultation appointments are 15 minutes; a double appointment is available at no extra cost for a complex issue." },
+    { "id": "second-opinion", "source": "https://qpvs.co.uk/", "questions": ["Can I switch vets or get a second opinion?", "Do you see second opinion cases?"], "keywords": ["second opinion", "change vets", "switch vets", "transfer", "another vet", "register"], "answer": "Yes. If your pet is registered elsewhere and you want to change vets, or want a second opinion, get in touch. The practice is happy to see second opinion cases." },
+    { "id": "insurance", "source": "https://qpvs.co.uk/", "questions": ["Do you do direct insurance claims?", "Do you work with PetPlan?"], "keywords": ["insurance", "insured", "petplan", "claim", "claims"], "answer": "The practice is happy to provide direct insurance claims for patients insured with PetPlan. Please contact the team to discuss it." },
+    { "id": "plan", "source": "https://qpvs.co.uk/healthy-pets-plan/", "questions": ["What is the Healthy Pets Plan?", "How much is the Healthy Pets Plan?"], "keywords": ["healthy pets plan", "pets plan", "monthly plan", "plan", "gocardless"], "answer": "It is a monthly plan covering booster vaccinations, flea and worm treatment, 3 vet consults for illness or injury and a 10% discount card. Prices per month: dogs under 10kg £16, 10-25kg £18, 25-40kg £20, 40-50kg £27, 50kg+ £35; cats £16. Payment is by GoCardless and you can set it up at the surgery or by calling 01204 525066." },
+    { "id": "prices", "source": "https://qpvs.co.uk/", "questions": ["How much does it cost?", "Do you have a price list?"], "keywords": ["cost", "costs", "price list", "common prices"], "answer": "The practice has a price list for common treatments on its website, and for anything else you can call 01204 525066 or email info@qpvs.co.uk. You can talk to the team about prices at any time." }
+  ],
+  "selfTests": [
+    ["what if my pet has an emergency", "faq:emergency"], ["who covers out of hours", "faq:ooh"], ["is there parking", "faq:parking"], ["what are your opening hours", "hours"],
+    ["how much is the healthy pets plan", "faq:plan"], ["what is the capital of France", "fallback"], ["do you board hamsters", "fallback"], ["tell me a joke", "fallback"]
+  ]
+}

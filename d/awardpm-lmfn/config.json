@@ -1,0 +1,44 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Award Property Management (unofficial demo)",
+  "brandColor": "#8a2a2a",
+  "handoff": "email",
+  "contactEmail": "info@awardpm.com",
+  "phoneDisplay": "817.294.2353",
+  "phoneNumber": "+18172942353",
+  "address": "3601 Hulen Street, Suite 101, Fort Worth, TX 76107",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Award Property Management website. Ask about paying rent, maintenance requests, pets or office hours, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday to Friday", "time": "9:00am to 5:00pm" },
+    { "days": "Saturday and Sunday", "time": "By appointment only" }
+  ],
+  "hoursNote": "Source: the contact page.",
+  "quickReplies": ["How do I pay rent?", "Maintenance request", "Pet policy", "Office hours"],
+  "timeChips": ["Weekday morning", "Weekday afternoon", "Not sure yet"],
+  "services": [
+    { "id": "tenant", "name": "Tenant questions (rent, maintenance, leases)", "description": "Ask about paying rent, late fees, maintenance requests, pets, roommates and guests. Details come from the Tenant FAQs page.", "keywords": ["tenant", "tenants", "renting", "resident"] },
+    { "id": "owner", "name": "Owner services", "description": "The website lists services for property owners, including marketing, tenant screening, rent collection, maintenance, accounting and eviction. Please contact the team for details.", "keywords": ["owner", "owners", "landlord", "list my property", "manage my property", "management services"] }
+  ],
+  "faqs": [
+    { "id": "lease", "source": "https://www.awardpm.com/tenant-faq", "questions": ["How long is a lease term?", "Can I get a shorter or longer lease?"], "keywords": ["lease term", "lease length", "how long is the lease", "renew", "extend"], "answer": "The standard lease term is 12 months. For a shorter or longer term, contact the office to discuss whether they can accommodate it. After the initial term you may be able to renew or extend on the agreed terms." },
+    { "id": "insurance", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Do I need renters insurance?", "Is renters insurance mandatory?"], "keywords": ["renters insurance", "renter insurance", "insurance"], "answer": "Yes, renters' insurance is mandatory. It is included in the Resident Benefits Package, but you can opt out if you already have a policy or prefer your own provider. You must show proof of insurance." },
+    { "id": "pay-rent", "source": "https://www.awardpm.com/tenant-faq", "questions": ["How do I pay rent?", "Can I pay rent by mail?"], "keywords": ["pay rent", "paying rent", "rent payment", "tenant portal"], "answer": "The preferred way to pay rent is through your tenant portal. You may also mail your rent payment to the office." },
+    { "id": "late", "source": "https://www.awardpm.com/tenant-faq", "questions": ["When is rent due and when are late fees charged?", "What is the late fee?"], "keywords": ["rent due", "due date", "late fee", "late charge", "late rent"], "answer": "Rent is due on the 1st of each month and is considered late after 12:00 a.m. on the 4th. A late fee of 10% of the monthly rent is charged on outstanding balances on the 4th. Payments are applied first to late fees and administrative fees, then to rent." },
+    { "id": "maintenance", "source": "https://www.awardpm.com/tenant-faq", "questions": ["How do I report a maintenance issue?", "How do I submit a repair request?"], "keywords": ["maintenance", "repair", "repairs", "broken", "fix"], "answer": "Maintenance issues must be reported in writing through the Tenant Portal on the website. During business hours you may also call the office for help, but that does not replace the online request. Non-emergency requests are handled during normal business hours." },
+    { "id": "emergency", "source": "https://www.awardpm.com/tenant-faq", "questions": ["What if my maintenance request is an emergency?", "Who do I call after hours?"], "keywords": ["emergency", "after hours", "after-hours", "urgent"], "answer": "For an after-hours emergency, fill out an online maintenance request and call the office; the recorded message explains how to leave a message and a team member will contact you promptly. Per the lease, an emergency is a condition materially affecting the physical health or safety of an ordinary tenant; a heating or air conditioning repair ordinarily is not one." },
+    { "id": "repair-cost", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Can a maintenance repair be a cost to me?", "Will I be charged for repairs?"], "keywords": ["charged for repairs", "repair cost", "tenant neglect", "damage", "missed appointment"], "answer": "Yes. You may be charged for repairs if the issue was caused by tenant neglect or damage, and you can be billed for missed contractor appointments if you do not provide access as scheduled." },
+    { "id": "pets", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Can I have a pet?", "Can I get a pet after I move in?"], "keywords": ["pet", "pets", "dog", "dogs", "cat", "cats", "pet deposit"], "answer": "Pet policies vary by property. Where pets are allowed, a pet deposit must be paid before move-in. If you want a pet after moving in, you need management approval, a pet agreement and a pet deposit before the pet comes in. The pet deposit is not refundable before the lease ends. Please contact the office about restrictions." },
+    { "id": "roommate", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Can I add a roommate?", "Can someone move in with me?"], "keywords": ["roommate", "roommates", "move in", "add to lease"], "answer": "All roommates must be approved before moving in. They must fill out an application and pay the application fee, and if they meet the criteria and the owner approves, they can be added to your lease." },
+    { "id": "guests", "source": "https://www.awardpm.com/tenant-faq", "questions": ["How long can guests stay?", "Can my guest stay for a month?"], "keywords": ["guest", "guests", "visitor", "visitors", "stay over"], "answer": "Under the lease, a guest may not stay on the property longer than 14 days without the landlord's written permission." },
+    { "id": "parking", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Are there parking rules?", "How many vehicles can I have?"], "keywords": ["parking", "park", "vehicles", "hoa"], "answer": "Yes. Residents must follow City Code or Homeowner Association rules on parking and any lease provisions, and the number of vehicles is limited to the amount in your lease." },
+    { "id": "lockout", "source": "https://www.awardpm.com/tenant-faq", "questions": ["What if I am locked out?", "Can I get a spare key?"], "keywords": ["locked out", "lockout", "spare key", "lost key", "keys", "locksmith"], "answer": "During business hours the office can release a spare key to the tenant on the lease with valid ID. If you are locked out after hours and need the office to meet you with a spare key, a $50 fee applies and the key must be returned within 24 hours. Otherwise you will need a locksmith at your own expense." },
+    { "id": "entry", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Can management enter my home when I am not there?", "Will you give notice before entering?"], "keywords": ["enter my home", "entry", "access", "inspection", "notice before entering"], "answer": "Management will try to schedule access with you in advance. If requests are ignored, they may enter at reasonable times without notice for necessary repairs or to show the property, and will tell you who is entering and roughly when. Entry without notice may also happen for inspections with photographs, emergency repairs or delivering written notices." },
+    { "id": "why", "source": "https://www.awardpm.com/tenant-faq", "questions": ["Why choose Award Property Management?", "How long have you been in business?"], "keywords": ["why choose", "experience", "how long in business"], "answer": "The website describes Award Property Management as a detail-oriented company with over 40 years of experience in residential property management." }
+  ],
+  "selfTests": [
+    ["how do i pay rent", "faq:pay-rent"], ["what is the late fee", "faq:late"], ["can i have a dog", "faq:pets"], ["what are your office hours", "hours"],
+    ["i am locked out", "faq:lockout"], ["what is the capital of France", "fallback"], ["how much is the management fee", "price"], ["do you sell cars", "fallback"]
+  ]
+}

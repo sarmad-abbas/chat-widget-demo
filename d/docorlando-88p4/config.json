@@ -1,0 +1,45 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Orlando Chiropractic (unofficial demo)",
+  "brandColor": "#2b5d8a",
+  "handoff": "email",
+  "contactEmail": "docorlandoco@gmail.com",
+  "phoneDisplay": "(303) 543-7700",
+  "phoneNumber": "+13035437700",
+  "address": "413 Summit Boulevard Unit 203, Broomfield, CO 80021",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Orlando Chiropractic website. Ask about the first visit, insurance, referrals or office hours, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday to Wednesday", "time": "9:30AM to 1:00PM and 3:00PM to 6:00PM" },
+    { "days": "Thursday", "time": "11:00AM to 1:00PM and 3:00PM to 5:00PM" },
+    { "days": "Friday, Saturday and Sunday", "time": "Closed" }
+  ],
+  "hoursNote": "Source: the contact page.",
+  "quickReplies": ["Opening hours", "What happens on my first visit?", "Do I need a referral?", "Do you take insurance?"],
+  "timeChips": ["Weekday morning", "Weekday afternoon", "Not sure yet"],
+  "services": [
+    { "id": "chiro", "name": "Chiropractic care", "description": "Spinal and musculoskeletal care by a chiropractor. See the FAQs for what happens at an adjustment.", "keywords": ["chiropractic", "chiropractor", "adjustment", "adjustments"] },
+    { "id": "acupuncture", "name": "Acupuncture", "description": "Listed on the practice's services menu. Please contact the office for details.", "keywords": ["acupuncture", "needles"] },
+    { "id": "zone", "name": "Zone Technique", "description": "Listed on the practice's services menu. Please contact the office for details.", "keywords": ["zone technique", "zone"] },
+    { "id": "consult", "name": "Free consultation (new patient special)", "description": "The website advertises a new patient special: book a free consultation. Please check the website or call for current terms.", "keywords": ["free consultation", "consultation", "new patient special", "new patient"] }
+  ],
+  "faqs": [
+    { "id": "what", "source": "https://docorlando.com/faqs", "questions": ["What is chiropractic care?", "What does a chiropractor do?"], "keywords": ["what is chiropractic", "chiropractic care", "what is a chiropractor"], "answer": "Chiropractic care focuses on the diagnosis and treatment of musculoskeletal disorders, particularly those affecting the spine. Chiropractors use manual techniques such as spinal manipulation to restore alignment and function." },
+    { "id": "conditions", "source": "https://docorlando.com/faqs", "questions": ["What conditions can chiropractic care help with?", "Do you treat back pain?"], "keywords": ["conditions", "back pain", "neck pain", "headache", "headaches", "sciatica", "carpal tunnel", "sports injury", "migraine"], "answer": "The practice's FAQ lists back pain, neck pain, headaches, sciatica, carpal tunnel syndrome and sports injuries, among others. The website also has symptom pages on back pain, headaches, neck pain and neuropathy." },
+    { "id": "adjustment", "source": "https://docorlando.com/faqs", "questions": ["What happens during an adjustment?", "How does an adjustment work?"], "keywords": ["adjustment", "adjustments", "what happens during", "crack", "manipulation"], "answer": "The chiropractor uses their hands or a small instrument to apply a controlled force to a joint in the spine or elsewhere, intended to restore proper alignment and function and relieve pain and other symptoms." },
+    { "id": "safe", "source": "https://docorlando.com/faqs", "questions": ["Is chiropractic care safe?", "Are there any risks?"], "keywords": ["safe", "safety", "risk", "risks", "side effects"], "answer": "The FAQ says chiropractic care is generally considered safe when performed by a licensed and trained chiropractor. As with any healthcare there are potential risks and side effects, but they are typically minor and uncommon." },
+    { "id": "visits", "source": "https://docorlando.com/faqs", "questions": ["How many visits will I need?", "How long does an appointment last?"], "keywords": ["how many visits", "how many sessions", "how long", "appointment length", "duration"], "answer": "The number of visits depends on your condition and how you respond; some patients need only a few and others ongoing care, and your chiropractor will build a personalised plan. The length of an appointment depends on your condition and the treatments provided; ask the doctor when the plan of care is presented." },
+    { "id": "referral", "source": "https://docorlando.com/faqs", "questions": ["Do I need a referral to see a chiropractor?", "Do I need to see my doctor first?"], "keywords": ["referral", "referred", "gp", "doctor first"], "answer": "In most cases you do not need a referral from another healthcare provider. Some insurance plans may require one for coverage, so check with your insurer beforehand." },
+    { "id": "other-care", "source": "https://docorlando.com/faqs", "questions": ["Can chiropractic be combined with other treatments?", "Can I do physical therapy as well?"], "keywords": ["combined", "other treatments", "physical therapy", "massage therapy", "medication", "alongside"], "answer": "Yes. The FAQ says chiropractic care can often be used alongside other treatments such as physical therapy, massage therapy and medication." },
+    { "id": "first-visit", "source": "https://docorlando.com/faqs", "questions": ["What happens on my first visit?", "I have never seen a chiropractor before, what should I expect?"], "keywords": ["first visit", "first appointment", "never been", "what to expect", "new patient"], "answer": "You will have a private conversation with the doctor about your concerns and go over your intake paperwork, then the doctor examines your nervous and musculoskeletal system. The doctor may recommend spinal X-rays, and may give a relief treatment at the first visit depending on your case. A later report of findings visit explains the results and your plan of care." },
+    { "id": "insurance", "source": "https://docorlando.com/financial-information", "questions": ["Do you take insurance?", "Which insurance plans do you accept?"], "keywords": ["insurance", "insurer", "medicare", "auto insurance", "cash plan", "cash plans", "wellness plan"], "answer": "The practice says it accepts a variety of insurance plans, including private health insurance, Medicare and auto insurance in certain cases. It also has cash/wellness plans. For the most accurate pricing and insurance details, please contact the office." },
+    { "id": "contact", "source": "https://docorlando.com/contact", "questions": ["How do I contact you?", "Can I text the office?"], "keywords": ["contact", "text the office", "email", "phone number"], "answer": "You can call (303) 543-7700, or send a text or email through the website's Send us a Message option." },
+    { "id": "where", "source": "https://docorlando.com/contact", "questions": ["Where is the office?", "What is the address?"], "keywords": ["where", "address", "broomfield", "summit boulevard", "location"], "answer": "The office is at 413 Summit Boulevard, Unit 203, Broomfield, CO 80021." },
+    { "id": "free-consult", "source": "https://docorlando.com/faqs", "questions": ["Do you offer a free consultation?", "What is the new patient special?"], "keywords": ["free consultation", "new patient special", "free consult"], "answer": "The website advertises a new patient special: you can book a free consultation through the site. Please check the website or call for current terms." }
+  ],
+  "selfTests": [
+    ["do i need a referral", "faq:referral"], ["what happens on my first visit", "faq:first-visit"], ["do you take insurance", "faq:insurance"], ["what are your opening hours", "hours"],
+    ["is it safe", "faq:safe"], ["what is the capital of France", "fallback"], ["do you do massage for dogs", "fallback"], ["tell me a joke", "fallback"]
+  ]
+}

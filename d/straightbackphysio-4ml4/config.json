@@ -1,0 +1,50 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Straight Back Physio (unofficial demo)",
+  "brandColor": "#1f5f8b",
+  "handoff": "email",
+  "contactEmail": "enquiries@straightbackphysio.co.uk",
+  "phoneDisplay": "01242 303305",
+  "phoneNumber": "+441242303305",
+  "address": "90 Horsefair Street, Charlton Kings, Cheltenham, GL53 8JR",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Straight Back Physio website. Ask about opening hours, parking, prices or what to wear, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday to Friday", "time": "8am to 7:30pm" },
+    { "days": "Saturday", "time": "9am to 12pm" }
+  ],
+  "hoursNote": "Source: the clinic's FAQ and contact pages.",
+  "priceNote": "Prices as published on the clinic's Prices page.",
+  "quickReplies": ["Opening hours", "Is there parking?", "How much is a first appointment?", "Do you take insurance?"],
+  "timeChips": ["Weekday morning", "Weekday evening", "Saturday morning"],
+  "services": [
+    { "id": "initial", "name": "Initial physiotherapy assessment", "price": "£85 (45 minutes)", "priceSource": "https://www.straightbackphysio.co.uk/prices", "description": "A 45 minute first appointment with a thorough history, movement assessment and hands-on treatment.", "keywords": ["initial", "assessment", "first appointment", "first visit", "consultation"] },
+    { "id": "followup", "name": "Follow-up physiotherapy session", "price": "£55 (30 minutes)", "priceSource": "https://www.straightbackphysio.co.uk/prices", "description": "Standard 30 minute follow-up sessions to progress treatment and build strength.", "keywords": ["follow up", "followup", "follow-up", "next session", "physio session"] },
+    { "id": "shockwave", "name": "Shockwave therapy", "price": "£70 (15 minutes)", "priceSource": "https://www.straightbackphysio.co.uk/prices", "description": "Shockwave sessions need a prior assessment.", "keywords": ["shockwave", "shock wave"] },
+    { "id": "pilates", "name": "Physio-led Pilates", "price": "£35 (60 minutes)", "priceSource": "https://www.straightbackphysio.co.uk/prices", "description": "60 minute session, maximum 3 people per session.", "keywords": ["pilates"] },
+    { "id": "acupuncture", "name": "Acupuncture", "description": "Listed among the clinic's services. Please contact the team for details.", "keywords": ["acupuncture", "needles"] },
+    { "id": "children", "name": "Children's physiotherapy", "description": "Listed among the clinic's services. Please contact the team for details.", "keywords": ["children", "childrens", "child", "kids"] }
+  ],
+  "faqs": [
+    { "id": "location", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["Where are you based?", "Where is the clinic?"], "keywords": ["based", "find you", "entrance", "reception"], "answer": "The clinic is opposite the free car park at 90 Horsefair Street, Charlton Kings, Cheltenham, GL53 8JR. Head down the side of the building to reach the entrance and reception." },
+    { "id": "parking", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["Is there parking?", "Where can I park?"], "keywords": ["parking", "park", "car park"], "answer": "There is free parking in the car park directly opposite on Horsefair Street, but no onsite parking. There is also on-street parking on Horsefair Street." },
+    { "id": "dropin", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["Can I just drop in?", "Do you take walk-ins?"], "keywords": ["drop in", "dropin", "walk in", "walkin"], "answer": "If you are nearby, the clinic can often accommodate drop-ins and will do its best to help." },
+    { "id": "length", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["How long is a physiotherapy appointment?", "How long does a session last?"], "keywords": ["how long", "length", "minutes", "duration"], "answer": "The first appointment lasts 45 minutes. Standard follow-up sessions last 30 minutes." },
+    { "id": "cost", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["How much does physiotherapy cost?", "What are your prices?"], "keywords": ["packages", "package", "pack", "buy 5"], "answer": "The first appointment is £85 (45 minutes). Standard follow-up sessions are £55 (30 minutes). Pre-paid Buy 5, Get 1 Free packages bring physio sessions to £45.83 each; the team will discuss this at your assessment." },
+    { "id": "wear", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["What should I wear?", "What do I bring to my appointment?"], "keywords": ["wear", "clothes", "clothing", "shorts", "bring"], "answer": "Wear something comfortable that lets you move easily. For lower back, hip, knee, ankle or foot problems, bring shorts. For neck, upper back, shoulder or elbow problems, a t-shirt or loose top helps." },
+    { "id": "sessions", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["How many sessions will I need?", "How many appointments do I need?"], "keywords": ["how many sessions", "number of sessions", "how many appointments"], "answer": "There is no fixed number because everyone's needs differ, but it is likely you will need at least 4 treatment sessions. Treatment is agreed with you and reviewed at each session." },
+    { "id": "insurance", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["Do you treat patients covered by medical insurance?", "Do you accept insurance?"], "keywords": ["insurance", "insured", "bupa", "insurer"], "answer": "The clinic is registered with most major health insurance companies. If you are unsure whether your insurer is included, call 01242 303305 and the team will check." },
+    { "id": "scan", "source": "https://www.straightbackphysio.co.uk/faq", "questions": ["Can you refer me for an X-ray, MRI or scan?", "Do I need a GP to get a scan?"], "keywords": ["xray", "x-ray", "mri", "scan", "ultrasound", "imaging", "gp", "referral"], "answer": "If the team thinks imaging is relevant, they can refer you directly for a private scan or X-ray. You do not need a GP to authorise it." },
+    { "id": "cancel", "source": "https://www.straightbackphysio.co.uk/prices", "questions": ["What is your cancellation policy?", "Can I cancel my appointment?"], "keywords": ["cancel", "cancellation", "cancelled", "no show", "reschedule"], "answer": "Appointments cancelled with at least 24 hours' notice are not charged. With less than 24 hours' notice, up to 100% of the fee may be charged, and a missed appointment may be charged at the full rate." },
+    { "id": "booking-how", "source": "https://www.straightbackphysio.co.uk/prices", "questions": ["How do I book an appointment?", "Can I book online?"], "keywords": ["book online", "online booking"], "answer": "Appointments can be booked online, by telephone, by email or in person. The clinic's phone number is 01242 303305." },
+    { "id": "payment", "source": "https://www.straightbackphysio.co.uk/prices", "questions": ["How do I pay?", "Do you take cards?"], "keywords": ["pay", "payment", "card", "cards"], "answer": "Payment is due at the time of treatment unless otherwise agreed. The clinic accepts major debit and credit cards and other payments as advertised on its site." },
+    { "id": "emergency", "source": "https://www.straightbackphysio.co.uk/prices", "questions": ["Do you offer emergency care?", "Is this an emergency service?"], "keywords": ["emergency", "urgent", "ambulance"], "answer": "The clinic does not provide emergency medical services. In a medical emergency, contact the emergency services or seek immediate medical attention." },
+    { "id": "reply", "source": "https://www.straightbackphysio.co.uk/contact", "questions": ["How quickly do you reply to messages?", "How long until I hear back?"], "keywords": ["reply", "respond", "hear back", "get back"], "answer": "The clinic says it aims to reply to messages within 24 to 48 hours." }
+  ],
+  "selfTests": [
+    ["what are your opening hours", "hours"], ["is there parking", "faq:parking"], ["how much is the first appointment", "service-price:initial"],
+    ["do you take bupa", "faq:insurance"], ["what should i wear", "faq:wear"], ["what is the capital of France", "fallback"],
+    ["do you treat my dog", "fallback"], ["can i cancel", "faq:cancel"]
+  ]
+}

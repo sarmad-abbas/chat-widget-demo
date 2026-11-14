@@ -1,0 +1,52 @@
+{
+  "unofficialDemo": true,
+  "businessName": "The Back Room Chiropractic (unofficial demo)",
+  "brandColor": "#2e6a5e",
+  "handoff": "email",
+  "contactEmail": "info@backroomchiro.co.uk",
+  "phoneDisplay": "0118 375 0803",
+  "phoneNumber": "+441183750803",
+  "address": "22 London Road, Twyford, Reading, RG10 9ER",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from The Back Room Chiropractic website. Ask about prices, what happens at a first visit or opening hours, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday", "time": "8:00am to 6:00pm" },
+    { "days": "Tuesday", "time": "8:00am to 8:00pm" },
+    { "days": "Wednesday", "time": "8:00am to 7:00pm" },
+    { "days": "Thursday", "time": "8:00am to 6:00pm" },
+    { "days": "Friday", "time": "8:00am to 7:00pm" },
+    { "days": "Saturday", "time": "Please ask the team" }
+  ],
+  "hoursNote": "Source: the contact page.",
+  "priceNote": "Prices as published on the clinic's Pricing page.",
+  "quickReplies": ["How much is a first visit?", "Will it hurt?", "Opening hours", "Do I need a referral?"],
+  "timeChips": ["Weekday morning", "Weekday evening", "Not sure yet"],
+  "services": [
+    { "id": "first", "name": "First visit (initial consultation)", "price": "£75.00", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "The initial consultation takes around 45 minutes.", "keywords": ["first visit", "initial consultation", "initial", "first appointment", "new patient"] },
+    { "id": "followon", "name": "Follow-on treatment", "price": "£55.00", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "Follow-on treatments are 30 minutes long.", "keywords": ["follow on", "follow-on", "followup", "follow up", "next treatment"] },
+    { "id": "assessment", "name": "Free assessment", "price": "Free (15 minutes, no obligation)", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "A free 15 minute assessment to let you know if the clinic thinks it can help, with no obligation to book.", "keywords": ["free assessment", "assessment", "free consultation"] },
+    { "id": "massage", "name": "Soft tissue therapy (sports massage)", "price": "30 minutes £35.00, 45 minutes £45.00, 60 minutes £60.00", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "Sports massage in 30, 45 or 60 minute sessions.", "keywords": ["massage", "sports massage", "soft tissue"] },
+    { "id": "restorative", "name": "Restorative wellness treatment", "price": "£100", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "Listed on the clinic's treatments page.", "keywords": ["restorative", "wellness treatment"] },
+    { "id": "epley", "name": "Epley manoeuvre", "price": "£55.00", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "Listed on the clinic's treatments page.", "keywords": ["epley", "epleys", "vertigo"] },
+    { "id": "reiki", "name": "Reiki", "price": "£65.00", "priceSource": "https://www.backroomchiro.co.uk/pricing/", "description": "Listed on the clinic's treatments page.", "keywords": ["reiki"] }
+  ],
+  "faqs": [
+    { "id": "mctimoney", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["What is McTimoney chiropractic?", "What type of chiropractic do you do?"], "keywords": ["mctimoney", "type of chiropractic"], "answer": "McTimoney chiropractors focus on the spine and the neuro-musculoskeletal system and how conditions affecting these areas can affect your health and performance." },
+    { "id": "referral", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Do I need a referral from my doctor?", "Do I need to see my GP first?"], "keywords": ["referral", "referred", "gp", "doctor"], "answer": "You do not need a referral from your doctor to see a chiropractor. With your permission the clinic will let your GP know you are receiving chiropractic treatment and, where needed, refer you back for further investigation." },
+    { "id": "length", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["How long is a treatment?", "How long does the first appointment take?"], "keywords": ["how long", "length", "duration", "minutes"], "answer": "The initial consultation takes around 45 minutes. All follow-on treatments are 30 minutes long." },
+    { "id": "ages", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Is it safe for people of all ages?", "Do you treat children or older people?"], "keywords": ["ages", "children", "child", "elderly", "kids", "babies"], "answer": "Yes. The clinic says the gentle treatment is suitable for all ages, from the young through to the elderly." },
+    { "id": "qualified", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Is my chiropractor qualified?", "Are your chiropractors registered?"], "keywords": ["qualified", "registered", "gcc", "registration number", "qualifications"], "answer": "Yes. All chiropractors are governed by the General Chiropractic Council and each must have a registration number to practise." },
+    { "id": "undress", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Will I need to get undressed?", "What should I wear?"], "keywords": ["undress", "undressed", "wear", "clothes", "clothing"], "answer": "For the first visit you need to undress down to your underwear because of the neurological tests; if you are uncomfortable with that you may wear shorts and a strappy top or vest. For follow-up treatments, tracksuit bottoms and a t-shirt are fine." },
+    { "id": "hurt", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Will it hurt?", "Is the treatment painful?"], "keywords": ["hurt", "hurts", "painful", "pain", "sore"], "answer": "The McTimoney adjustments are light and gentle and rarely painful. After treatment you may notice a brief period of stiffness or tiredness, but more often patients report a feeling of wellbeing and relief from stress and pain." },
+    { "id": "safe", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Is chiropractic safe?", "Is the treatment safe?"], "keywords": ["safe", "safety", "risk", "risks"], "answer": "The clinic says chiropractic treatment is very safe. A full medical history is taken before any treatment, and if the chiropractor suspects a problem needing further investigation you will be referred to your GP first." },
+    { "id": "sessions", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["How many treatments will I need?", "How many sessions do people need?"], "keywords": ["how many treatments", "how many sessions", "number of treatments", "how many appointments"], "answer": "Most people need between two and six treatments, initially weekly and then spaced out as the condition improves. It depends on your age, the nature of the problem and how long you have had it." },
+    { "id": "advice", "source": "https://www.backroomchiro.co.uk/faq/", "questions": ["Will I get advice so the problem does not come back?", "Do you give exercises?"], "keywords": ["advice", "exercises", "stretches", "posture", "postural", "recur"], "answer": "Yes. You will get postural advice after treatment and may be given some basic exercises or stretches if the chiropractor thinks they would help." },
+    { "id": "booking", "source": "https://www.backroomchiro.co.uk/contact-us/", "questions": ["How do I book?", "Can I book online?"], "keywords": ["book online", "booking", "waiting list", "cancellations", "facebook"], "answer": "You can book online or by calling 0118 375 0803; the clinic says you can also book through Facebook. If there is no suitable appointment, check the online booking for cancellations or call to be put on a waiting list." },
+    { "id": "location", "source": "https://www.backroomchiro.co.uk/contact-us/", "questions": ["Where are you?", "What is the clinic address?"], "keywords": ["twyford", "reading", "london road"], "answer": "The clinic is at 22 London Road, Twyford, Reading, RG10 9ER." }
+  ],
+  "selfTests": [
+    ["how much is a first visit", "service-price:first"], ["will it hurt", "faq:hurt"], ["do i need a referral", "faq:referral"], ["what are your opening hours", "hours"],
+    ["how many treatments will i need", "faq:sessions"], ["what is the capital of France", "fallback"], ["do you accept insurance", "fallback"], ["can you fix my car", "fallback"]
+  ]
+}

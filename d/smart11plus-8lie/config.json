@@ -1,0 +1,47 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Smart 11+ Tuition (unofficial demo)",
+  "brandColor": "#5b3f99",
+  "handoff": "email",
+  "contactEmail": "learn@smart11plus.co.uk",
+  "phoneDisplay": "0121 517 0339",
+  "phoneNumber": "+441215170339",
+  "address": "Centres in Solihull (Tudor Grange Academy, Dingle Lane, B91 3PD), Sutton Coldfield (Plantsbrook School, Upper Holland Road, B72 1RB), Harborne (Lordswood Boys' School, Hagley Rd, B17 8BJ) and Kings Heath (Woodthorpe Junior and Infant School, Greenwood Close, B14 6ET)",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Smart 11+ Tuition website. Ask about fees, group sizes, locations or the 11+ exam, or leave an enquiry.",
+  "hours": [
+    { "days": "Office: Tuesday to Thursday", "time": "9:30am to 5:00pm" },
+    { "days": "Office: Friday", "time": "9:30am to 3:00pm" },
+    { "days": "Office: Saturday", "time": "8:00am to 1:00pm" },
+    { "days": "Centres", "time": "Weekday evenings and weekends" }
+  ],
+  "hoursNote": "Source: the locations and contact page.",
+  "priceNote": "Fee as published on the Fees page; please check there or with the team for the current figure.",
+  "quickReplies": ["How much does it cost?", "Where are the centres?", "How many pupils per group?", "Free assessment"],
+  "timeChips": ["Weekday evening", "Saturday", "Not sure yet"],
+  "services": [
+    { "id": "success", "name": "Smart 11+ Success Course (Years 3, 4 and 5)", "price": "from £25.50 per session", "priceSource": "https://www.smart11plus.co.uk/pricing/", "description": "Weekly in-centre sessions with bespoke online homework and weekly written and verbal feedback, in English, Maths, Verbal and Non-Verbal Reasoning.", "keywords": ["success course", "11+ course", "weekly course", "year 3", "year 4", "year 5", "tuition", "course", "courses"] },
+    { "id": "sats", "name": "SATs Year 6 course", "price": "from £25.50 per session", "priceSource": "https://www.smart11plus.co.uk/pricing/", "description": "Year 6 SATs course in line with the National Curriculum, with SATs and independent school exam support.", "keywords": ["sats", "year 6", "independent school exam"] },
+    { "id": "assessment", "name": "Free initial assessment", "description": "A free initial assessment gives an idea of where your child is compared with past pupils and leads to specific recommendations.", "keywords": ["assessment", "free assessment", "initial assessment", "trial"] },
+    { "id": "booster", "name": "Holiday booster courses", "description": "Listed on the website, including creative writing booster courses for independent school applicants. Please contact the team for details and dates.", "keywords": ["booster", "holiday course", "holiday boosters", "creative writing"] }
+  ],
+  "faqs": [
+    { "id": "group-size", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["How many pupils are in each group?", "What is the class size?"], "keywords": ["group size", "class size", "how many pupils", "how many children", "small groups"], "answer": "There is a maximum of 6 pupils in each group. Groups are assigned by ability so children work with like-minded peers and get close support from a tutor." },
+    { "id": "cost", "source": "https://www.smart11plus.co.uk/pricing/", "questions": ["How much does it cost?", "How can I pay?"], "keywords": ["how can i pay", "pay", "payment", "direct debit", "childcare vouchers", "tax free childcare", "tax-free childcare", "universal credit"], "answer": "Fees on the Fees page start from £25.50 per session (£20.40 when paying by Tax-Free Childcare). The FAQ page lists payment by Direct Debit through GoCardless, cash, or Childcare Vouchers / Tax-Free Childcare." },
+    { "id": "age", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["What is the right age to start 11+ preparation?", "When should my child start?"], "keywords": ["right age", "when to start", "start preparing", "what age", "too early", "too late"], "answer": "It depends on the child. Most children start in Year 4, but many begin in Year 3 and others in Year 5 and are successful. It is never too late or too early to begin." },
+    { "id": "grammar", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["What is a grammar school?", "What is the difference between grammar and private schools?"], "keywords": ["grammar school", "grammar", "private school", "independent school"], "answer": "A grammar school is a state secondary school with an entrance exam (the 11+) and no fees. Private schools charge fees, may offer scholarships, and set their own entrance exams with more emphasis on creative writing and long written answers." },
+    { "id": "exam", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["What is the 11+ exam?", "When is the 11+ exam?"], "keywords": ["11+ exam", "eleven plus", "exam date", "register for exam", "gl exam", "west midlands partnership"], "answer": "The 11+ exam assesses eligibility for grammar school. You register your child in May of Year 5 and they sit the exam in May of Year 6. There is one GL entrance exam across West Midlands grammar schools under the West Midlands Grammar School partnership." },
+    { "id": "frequency", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["How often should my child go to tuition?", "How many sessions a week?"], "keywords": ["how often", "sessions per week", "sessions a week", "weekly", "frequency"], "answer": "It varies from child to child, but 2 sessions per week will strengthen their depth of learning. A free initial assessment gives specific recommendations." },
+    { "id": "pass", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["Can you tell me if my child will pass?", "Do you guarantee a pass?"], "keywords": ["guarantee", "will my child pass", "pass the 11+", "chance of passing"], "answer": "The tutors can never guarantee how a child will perform on the 11+. The initial assessment shows where your child currently sits compared with past pupils so specific recommendations can be made." },
+    { "id": "subjects", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["Which subjects do you cover?", "What does the curriculum include?"], "keywords": ["subjects", "curriculum", "english", "maths", "verbal reasoning", "non verbal reasoning", "nvr"], "answer": "The bespoke curriculum prepares pupils for the GL 11+ exam, independent school exams and SATs. It covers English, Verbal Reasoning, Maths and Non-Verbal Reasoning while closely following the national curriculum for English and Maths." },
+    { "id": "locations", "source": "https://www.smart11plus.co.uk/locations-and-contact/", "questions": ["Where are your centres?", "Where do the classes take place?"], "keywords": ["centres", "centre", "where", "locations", "solihull", "sutton coldfield", "harborne", "kings heath"], "answer": "Centres are in Solihull (Tudor Grange Academy, Dingle Lane, B91 3PD), Sutton Coldfield (Plantsbrook School, Upper Holland Road, B72 1RB), Harborne (Lordswood Boys' School, Hagley Rd, B17 8BJ) and Kings Heath (Woodthorpe Junior and Infant School, Greenwood Close, B14 6ET). Centres are open on weekday evenings and weekends." },
+    { "id": "ofsted", "source": "https://www.smart11plus.co.uk/pricing/", "questions": ["Are you Ofsted registered?", "Can I use Tax-Free Childcare?"], "keywords": ["ofsted", "registered provider", "childcare"], "answer": "The website says Smart 11+ is an Ofsted registered tuition provider and accepts Tax-Free Childcare, Childcare Vouchers and Universal Credit." },
+    { "id": "free-assessment", "source": "https://www.smart11plus.co.uk/faqs/", "questions": ["Do you offer a free assessment?", "How do I book an assessment?"], "keywords": ["free assessment", "initial assessment", "book assessment", "free trial"], "answer": "Yes, the website offers a free initial assessment for your child. You can book it through the website or by contacting the team on 0121 517 0339.", "action": "booking" }
+  ],
+  "selfTests": [
+    ["how many pupils in a group", "faq:group-size"], ["where are your centres", "faq:locations"], ["what is the right age to start", "faq:age"],
+    ["do you guarantee a pass", "faq:pass"], ["what are your office hours", "hours"], ["what is the capital of France", "fallback"],
+    ["do you teach piano", "fallback"], ["do you have a swimming pool", "fallback"]
+  ]
+}

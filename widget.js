@@ -136,6 +136,34 @@
   function extraFor(cfg, id) {
     return (cfg.extraKeywords && cfg.extraKeywords[id]) || [];
   }
+  // Handoff mode: "whatsapp" (default, original behaviour), "email" or "phone".
+  function modeOf(cfg) {
+    var m = String((cfg && cfg.handoff) || 'whatsapp').toLowerCase();
+    return m === 'email' || m === 'phone' ? m : 'whatsapp';
+  }
+  function validEmail(a) { return /^[^\s@<>"',;]+@[^\s@<>"',;]+\.[^\s@<>"',;]+$/.test(String(a || '')); }
+  function telHref(cfg) {
+    var n = String(cfg.phoneNumber || cfg.phoneDisplay || '').replace(/[^\d+]/g, '');
+    return /\d{6,}/.test(n) ? 'tel:' + n : '';
+  }
+  // Build the end-of-flow handoff: { mode, href, label, note } (href '' when the contact detail is missing).
+  function buildHandoff(cfg, summary) {
+    var mode = modeOf(cfg);
+    if (mode === 'email') {
+      var to = String(cfg.contactEmail || '').trim();
+      return { mode: mode, label: 'Send by email', testid: 'mailto-link',
+        href: validEmail(to) ? 'mailto:' + to + '?subject=' + encodeURIComponent('Website enquiry') +
+          '&body=' + encodeURIComponent(summary).replace(/%0A/g, '%0D%0A') : '',
+        note: 'This opens your own email app with the message typed out. Nothing is sent until you press send there.' };
+    }
+    if (mode === 'phone') {
+      return { mode: mode, label: 'Call ' + (cfg.phoneDisplay || 'us'), testid: 'tel-link', href: telHref(cfg),
+        note: 'Tap to call. Nothing happens until you confirm the call on your phone.' };
+    }
+    return { mode: mode, label: 'Send on WhatsApp', testid: 'wa-link', href: waLink(cfg, summary),
+      note: 'This opens WhatsApp with your message typed out. Nothing is sent until you press send there.' +
+        (cfg.whatsappIsPlaceholder ? ' (Demo: this number is a placeholder.)' : '') };
+  }
   function fmtLines(arr) { return arr.join('\n'); }
   function serviceLine(s) { return '• ' + s.name + (s.price ? ' — ' + s.price : ''); }
 
@@ -143,25 +171,36 @@
     var m = cfg.messages || {};
     var name = cfg.businessName || 'us';
     var services = cfg.services || [];
+    var wa = modeOf(cfg) === 'whatsapp';
     switch (id) {
       case 'greeting':
+        if (!wa) return m.greeting || ('Hello! Welcome to ' + name + '. Ask me about opening hours, services or location, or leave an enquiry for the team.');
         return m.greeting || ('Assalam o Alaikum! Welcome to ' + name + '. Ask me about timings, prices or location, or I can take your booking details.');
       case 'thanks':
+        if (!wa) return m.thanks || 'You are welcome! If you need anything else, just type here.';
         return m.thanks || 'You are welcome! If you need anything else, just type here. Allah Hafiz.';
       case 'hours':
         var h = (cfg.hours || []).map(function (x) { return x.days + ': ' + x.time; });
-        if (!h.length) return 'Please message us on WhatsApp for our timings.';
+        if (!h.length) return wa ? 'Please message us on WhatsApp for our timings.' : 'Opening hours are not listed on the website. Please contact the team.';
         return 'Our timings:\n' + fmtLines(h) + (cfg.hoursNote ? '\n' + cfg.hoursNote : '');
       case 'location':
-        return (cfg.address ? 'We are at ' + cfg.address + '.' : 'Please ask us on WhatsApp for the address.') +
+        return (cfg.address ? 'We are at ' + cfg.address + '.' : (wa ? 'Please ask us on WhatsApp for the address.' : 'Please contact the team for the address.')) +
           (cfg.mapUrl ? '\nMap: ' + cfg.mapUrl : '');
       case 'services':
         return services.length ? 'What we offer:\n' + fmtLines(services.map(serviceLine)) +
-          (cfg.priceNote ? '\n' + cfg.priceNote : '') : 'Please ask us on WhatsApp about our services.';
+          (cfg.priceNote ? '\n' + cfg.priceNote : '') : (wa ? 'Please ask us on WhatsApp about our services.' : 'Please contact the team about our services.');
       case 'price':
+        if (!wa && !services.some(function (s) { return s.price; })) {
+          return m.price || 'Prices are not listed on the website. Please contact the team for a quote.';
+        }
         return services.length ? 'Our prices:\n' + fmtLines(services.map(serviceLine)) +
-          (cfg.priceNote ? '\n' + cfg.priceNote : '') : 'Please ask us on WhatsApp for prices.';
+          (cfg.priceNote ? '\n' + cfg.priceNote : '') : (wa ? 'Please ask us on WhatsApp for prices.' : 'Please contact the team for prices.');
       case 'contact':
+        if (!wa) {
+          return (cfg.phoneDisplay ? 'You can call us on ' + cfg.phoneDisplay + '. ' : '') +
+            (modeOf(cfg) === 'email' && cfg.contactEmail ? 'Our enquiry address is ' + cfg.contactEmail + '. ' : '') +
+            'I can also prepare an enquiry ' + (modeOf(cfg) === 'email' ? 'email' : 'with a call button') + ' for you now.';
+        }
         return (cfg.phoneDisplay ? 'You can reach us on ' + cfg.phoneDisplay + '. ' : '') +
           'The quickest way is WhatsApp. I can pass your details to the team now.';
       default:
@@ -201,7 +240,9 @@
     cands.forEach(function (c) { if (!best || c.conf > best.conf) best = c; }); // ties keep earlier (specific before greeting)
     if (!best || best.conf < threshold) {
       return { id: 'fallback', confidence: best ? best.conf : 0, answer: (cfg.messages && cfg.messages.fallback) ||
-        "I'm not sure about that one. Shall I pass this to the team on WhatsApp?", action: 'fallback' };
+        (modeOf(cfg) === 'whatsapp' ? "I'm not sure about that one. Shall I pass this to the team on WhatsApp?"
+          : "I'm not sure about that one, and I would rather not guess. Please contact the team. Shall I prepare an enquiry " + (modeOf(cfg) === 'email' ? 'email' : 'with a call button') + '?'),
+        action: 'fallback' };
     }
 
     // A service named together with a price word -> that service's price.
@@ -220,7 +261,8 @@
     }
     var action = best.id === 'booking' ? 'booking' : (best.id === 'contact' ? 'offer' : null);
     var answer = best.id === 'booking'
-      ? ((cfg.messages && cfg.messages.booking) || 'Happy to help you book. I will take a few details and prepare a WhatsApp message for the team.')
+      ? ((cfg.messages && cfg.messages.booking) || (modeOf(cfg) === 'whatsapp' ? 'Happy to help you book. I will take a few details and prepare a WhatsApp message for the team.'
+        : 'Happy to help. I will take a few details and prepare ' + (modeOf(cfg) === 'email' ? 'an email to the team.' : 'them for your call to the team.')))
       : answerFor(best.id, cfg);
     return { id: best.id, confidence: best.conf, answer: answer, action: action };
   }
@@ -287,6 +329,7 @@
     '.m.typing{color:#6b7280;font-style:italic}',
     '.wa{display:inline-flex;align-items:center;justify-content:center;margin-top:8px;padding:11px 16px;border-radius:10px;background:#25a244;color:#fff!important;',
     'font-weight:700;text-decoration:none!important;min-height:44px}',
+    '.wa.alt{background:var(--brand);color:var(--on)!important}',
     '.note{display:block;margin-top:6px;font-size:12px;color:#6b7280}',
     '.chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 0;background:#f6f7f8;max-height:112px;overflow-y:auto}',
     '.chips:empty{display:none}',
@@ -361,7 +404,7 @@
     var head = el('div', 'head');
     var ht = el('div', 't');
     ht.appendChild(el('div', 'n', cfg.businessName || 'Chat'));
-    ht.appendChild(el('div', 's', 'Automated assistant. Replies are from our FAQ.'));
+    ht.appendChild(el('div', 's', cfg.subtitle || 'Automated assistant. Replies are from our FAQ.'));
     var closeBtn = el('button', 'x', '×');
     closeBtn.type = 'button'; closeBtn.setAttribute('aria-label', 'Close chat');
     head.appendChild(ht); head.appendChild(closeBtn);
@@ -379,7 +422,9 @@
     var send = el('button', 'send', 'Send'); send.type = 'submit';
     form.appendChild(input); form.appendChild(send);
 
-    var foot = el('div', 'foot', cfg.whatsappIsPlaceholder ? 'Demo mode: WhatsApp number is a placeholder.' : 'Enquiries are sent via WhatsApp when you press the button.');
+    var foot = el('div', 'foot', cfg.footer || (modeOf(cfg) === 'email' ? 'Enquiries open in your own email app when you press the button.' :
+      (modeOf(cfg) === 'phone' ? 'Calls start only when you tap the call button.' :
+        (cfg.whatsappIsPlaceholder ? 'Demo mode: WhatsApp number is a placeholder.' : 'Enquiries are sent via WhatsApp when you press the button.'))));
 
     [head, log, chips, form, foot].forEach(function (n) { panel.appendChild(n); });
     w.appendChild(panel); w.appendChild(launcher);
@@ -448,14 +493,19 @@
       clearChips();
       setTimeout(function () {
         var m = el('div', 'm bot');
-        m.appendChild(document.createTextNode('Thank you, ' + d.name + '. Your enquiry is ready:\nName: ' + d.name + '\nPreferred time: ' + d.time + '\nNeed: ' + d.need));
+        m.appendChild(document.createTextNode('Thank you, ' + d.name + '. Your enquiry is ready' + (modeOf(cfg) === 'phone' ? ' (have these details to hand when you call)' : '') + ':\nName: ' + d.name + '\nPreferred time: ' + d.time + '\nNeed: ' + d.need));
         m.appendChild(el('br'));
-        var a = el('a', 'wa', 'Send on WhatsApp');
-        a.href = waLink(cfg, summary); a.target = '_blank'; a.rel = 'noopener noreferrer';
-        a.setAttribute('data-testid', 'wa-link');
-        m.appendChild(a);
-        m.appendChild(el('span', 'note', 'This opens WhatsApp with your message typed out. Nothing is sent until you press send there.' +
-          (cfg.whatsappIsPlaceholder ? ' (Demo: this number is a placeholder.)' : '')));
+        var h = buildHandoff(cfg, summary);
+        if (h.href) {
+          var a = el('a', h.mode === 'whatsapp' ? 'wa' : 'wa alt', h.label);
+          a.href = h.href;
+          if (h.mode !== 'phone') { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+          a.setAttribute('data-testid', h.testid);
+          m.appendChild(a);
+          m.appendChild(el('span', 'note', h.note));
+        } else {
+          m.appendChild(el('span', 'note', 'Sorry, I do not have a contact detail to hand this over. Please use the contact details on this website.'));
+        }
         log.appendChild(m); scroll();
         setChips([{ label: 'Start another enquiry', fn: function () { startFlow(); } }, { label: 'Ask a question', fn: function () { botSay('Go ahead, I am listening.', defaultChips); } }]);
       }, reduce ? 0 : 350);
@@ -531,7 +581,9 @@
       launcher.setAttribute('aria-label', 'Close chat');
       if (!welcomed) {
         welcomed = true;
-        addMsg('bot', cfg.welcome || ('Assalam o Alaikum! I am the assistant for ' + (cfg.businessName || 'this business') + '. Ask me about timings, prices or location, or leave an enquiry for the team.'));
+        addMsg('bot', cfg.welcome || (modeOf(cfg) === 'whatsapp'
+          ? 'Assalam o Alaikum! I am the assistant for ' + (cfg.businessName || 'this business') + '. Ask me about timings, prices or location, or leave an enquiry for the team.'
+          : 'Hello! I am the automated assistant for ' + (cfg.businessName || 'this business') + '. Ask me about opening hours, services or location, or leave an enquiry for the team.'));
         defaultChips();
       }
       input.focus();
@@ -561,7 +613,7 @@
    * 4. Boot
    * ------------------------------------------------------------------ */
   var api = {
-    version: '1.0.0', match: match, normalise: normalise, tokens: tokens, mount: mount,
+    version: '1.1.0', match: match, buildHandoff: buildHandoff, normalise: normalise, tokens: tokens, mount: mount,
     init: function (cfg) { if (document.body) return mount(cfg); document.addEventListener('DOMContentLoaded', function () { mount(cfg); }); }
   };
   window.DemoChat = api;

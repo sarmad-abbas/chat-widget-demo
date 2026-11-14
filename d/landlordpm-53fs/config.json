@@ -1,0 +1,43 @@
+{
+  "unofficialDemo": true,
+  "businessName": "Landlord Property Management (unofficial demo)",
+  "brandColor": "#1d4f7a",
+  "handoff": "email",
+  "contactEmail": "propmanager@landlordpm.com",
+  "phoneDisplay": "210-492-1695",
+  "phoneNumber": "+12104921695",
+  "address": "14546 Brookhollow #339, San Antonio, Texas 78232 (mailing address)",
+  "launcherLabel": "Ask a question",
+  "subtitle": "Unofficial demo. Replies come from a fixed FAQ list.",
+  "welcome": "Hello! This is an unofficial demo built from the Landlord Property Management website. Ask about applying, paying rent, deposits, pets or office hours, or leave an enquiry.",
+  "hours": [
+    { "days": "Monday to Friday", "time": "9:00 am to 4:30 pm" },
+    { "days": "Saturday and Sunday", "time": "Closed" }
+  ],
+  "hoursNote": "Closed on the holidays listed on the contact page. Source: the contact page.",
+  "quickReplies": ["How do I apply?", "How do I pay rent?", "Pet policy", "Security deposit"],
+  "timeChips": ["Weekday morning", "Weekday afternoon", "Not sure yet"],
+  "services": [
+    { "id": "tenant", "name": "Rentals and tenant questions", "description": "Ask about applying, deposits, rent, pets, utilities and repairs. Details come from the Tenant FAQs page.", "keywords": ["tenant", "tenants", "rental", "rentals", "renter", "resident"] },
+    { "id": "owner", "name": "Property management for owners", "description": "The website has pages about owner services and pricing. Please contact the team for details.", "keywords": ["owner", "owners", "landlord", "manage my property", "management services"] }
+  ],
+  "faqs": [
+    { "id": "reach", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How do I reach you?", "What is your phone number?"], "keywords": ["reach you", "leasing line", "main line", "call you"], "answer": "Email is best (propmanager@landlordpm.com). You can also call the main line on 210-492-1695 and leave a message, or the leasing line on 210-775-6263." },
+    { "id": "hold", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["Can you hold a place before I apply?", "Can you hold a property for me?"], "keywords": ["hold a place", "hold a property", "reserve a property"], "answer": "No. Once you apply, properties can only be held for two weeks after a deposit is paid." },
+    { "id": "apply", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How do I apply for a home?", "How do I apply to rent?"], "keywords": ["apply", "application", "applying", "how to apply"], "answer": "All application procedures start from the listings: click the property picture and use the HOW TO APPLY button. Applications are taken in the order received. If you have an issue, use the ask-a-question box under the property.", "action": null },
+    { "id": "response", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How long does an application take?", "When will I hear about my application?"], "keywords": ["application take", "hear back", "how long application", "approval time"], "answer": "Staff can usually respond in 1 to 3 business days, depending on weekends and holidays. A formal response is usually sent by email." },
+    { "id": "age", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How old do I have to be to apply?", "Does every adult need to apply?"], "keywords": ["how old", "age", "18", "adults"], "answer": "All adults 18 years or older must apply, even if they will not be the main leaseholder." },
+    { "id": "deposit", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How much is the security deposit?", "Is the deposit refundable?"], "keywords": ["security deposit", "deposit", "refund", "refundable"], "answer": "Approved applicants pay a refundable security deposit at lease signing of $25.00 less than the monthly rent, due within 48 hours of approval. You do not pay first and last month's rent with it; rent is pro-rated from your move-in date. The goal is a full refund, minus carpet cleaning, which is an automatic deduction." },
+    { "id": "pay-rent", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How do I pay rent?", "Can I pay in person?"], "keywords": ["pay rent", "paying rent", "echeck", "e-check", "pay slip", "cvs"], "answer": "You can pay rent through your portal by e-check or credit card. You can also download a pay slip to pay in person at places like CVS or HEB." },
+    { "id": "due", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["When is my rent due?", "What is the late fee?"], "keywords": ["rent due", "due date", "late fee", "late rent", "late charge"], "answer": "Rent is due on the 1st of each month. The late fee is 10% of the month's rent, starting on the 4th. Payments go first to late fees, maintenance fees or administrative fees, and then to rent." },
+    { "id": "pets", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["Can I have a pet?", "What is the pet deposit?"], "keywords": ["pet", "pets", "dog", "dogs", "cat", "cats", "pet deposit"], "answer": "Notify the property manager before getting a pet, complete a pet profile on landlordpm.petscreening.com and sign a pet agreement. The pet deposit is $500 per pet. The screening criteria say no pets over 40 pounds and a maximum of 2 pets per household." },
+    { "id": "utilities", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["Who pays for utilities?", "Who is responsible for water and electricity?"], "keywords": ["utilities", "water", "electric", "electricity", "cable", "internet", "sewer"], "answer": "The tenant is responsible for water, electric, cable and internet. Properties in the Bulverde area have separate billing for sewer service." },
+    { "id": "maintenance", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["How do I submit a repair request?", "What do I do about maintenance?"], "keywords": ["maintenance", "repair", "repairs", "broken", "fix"], "answer": "Submit repair requests through the tenant portal for the fastest response. You can also email the repairs address given on the site, which is monitored during regular business hours." },
+    { "id": "after-hours", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["What if I have an emergency after hours?", "Who do I call for urgent repairs?"], "keywords": ["emergency", "after hours", "after-hours", "urgent", "answering service"], "answer": "For after-hours or immediate service requests there is a 24-hour answering service on 210.988-0378. It is for emergency calls only; non-emergency repairs should go through the portal or repair line." },
+    { "id": "trash", "source": "https://www.landlordpm.com/tenant-faq", "questions": ["What about trash service?", "How do I get mailbox access?"], "keywords": ["trash", "garbage", "bins", "mailbox", "post office", "mail"], "answer": "For trash, check your city's website if service is city-provided; some areas use private companies. For mailbox access, take a copy of your lease to the nearest post office, which will re-key the box; there is typically a charge." }
+  ],
+  "selfTests": [
+    ["how do i apply", "faq:apply"], ["how much is the security deposit", "faq:deposit"], ["can i have a dog", "faq:pets"], ["what are your office hours", "hours"],
+    ["what is the late fee", "faq:due"], ["what is the capital of France", "fallback"], ["do you sell houses", "fallback"], ["tell me a joke", "fallback"]
+  ]
+}
